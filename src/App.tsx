@@ -7,6 +7,7 @@ interface Project {
   tech: string[];
   highlight?: string;
   category?: "game" | "ai" | "web";
+  url?: string;
 }
 
 const projects: Project[] = [
@@ -17,6 +18,7 @@ const projects: Project[] = [
     tech: ["Three.js", "Express", "Gemini API", "JavaScript"],
     highlight: "48小时极限开发",
     category: "game",
+    url: "https://github.com/RosunOY/echoes-of-ecology",
   },
   {
     name: "人类曙光 (Dawn of Humanity)",
@@ -25,6 +27,7 @@ const projects: Project[] = [
     tech: ["Canvas", "Vanilla JavaScript", "Web Audio API", "LocalStorage"],
     highlight: "独立开发",
     category: "game",
+    url: "https://github.com/RosunOY/Dawn_of_humanity_game",
   },
   {
     name: "拯救人类 (Save Human)",
@@ -33,6 +36,7 @@ const projects: Project[] = [
     tech: ["JavaScript", "Canvas", "Gemini API"],
     highlight: "AI对战",
     category: "game",
+    url: "https://github.com/RosunOY/Save_human",
   },
   {
     name: "商道世家",
@@ -41,6 +45,7 @@ const projects: Project[] = [
     tech: ["React", "Vite", "Google Gemini API"],
     highlight: "独立开发",
     category: "game",
+    url: "https://github.com/RosunOY/manage_game",
   },
   {
     name: "真相游戏 (Truth Game)",
@@ -48,6 +53,7 @@ const projects: Project[] = [
     tech: ["Node.js", "Express", "AI对话系统"],
     highlight: "策划中",
     category: "game",
+    url: "https://github.com/RosunOY/Truth_game",
   },
   {
     name: "智慧农业病虫害识别系统",
@@ -168,7 +174,13 @@ function App() {
             </div>
             <div className="project-list">
               {filteredProjects.map((project, index) => (
-                <div key={index} className="project-card">
+                <a
+                  key={index}
+                  href={project.url || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-card"
+                >
                   <div className="project-header">
                     <h3>{project.name}</h3>
                     {project.highlight && (
@@ -183,7 +195,7 @@ function App() {
                       </span>
                     ))}
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </section>

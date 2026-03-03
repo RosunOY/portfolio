@@ -250,6 +250,9 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
   border: 1px solid #f0f0f5;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
 }
 
 .project-card:hover {
