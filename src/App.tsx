@@ -97,20 +97,9 @@ function App() {
     "home",
   );
   const [filter, setFilter] = useState<"all" | "game" | "ai">("all");
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filteredProjects =
     filter === "all" ? projects : projects.filter((p) => p.category === filter);
-
-  const handleProjectClick = (project: Project) => {
-    if (project.url || project.githubUrl) {
-      setSelectedProject(project);
-    }
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-  };
 
   return (
     <div className="app">
@@ -192,11 +181,7 @@ function App() {
             </div>
             <div className="project-list">
               {filteredProjects.map((project, index) => (
-                <div
-                  key={index}
-                  className="project-card"
-                  onClick={() => handleProjectClick(project)}
-                >
+                <div key={index} className="project-card">
                   <div className="project-header">
                     <h3>{project.name}</h3>
                     {project.highlight && (
@@ -210,6 +195,28 @@ function App() {
                         {t}
                       </span>
                     ))}
+                  </div>
+                  <div className="project-actions">
+                    {project.url && (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-btn project-btn-play"
+                      >
+                        🎮 游玩
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-btn project-btn-github"
+                      >
+                        📂 详情
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
@@ -237,41 +244,6 @@ function App() {
           </section>
         )}
       </main>
-
-      {/* 项目选择弹窗 */}
-      {selectedProject && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={closeModal}>
-              ×
-            </button>
-            <h3>{selectedProject.name}</h3>
-            <p className="modal-desc">{selectedProject.description}</p>
-            <div className="modal-actions">
-              {selectedProject.url && (
-                <a
-                  href={selectedProject.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="modal-btn modal-btn-play"
-                >
-                  🎮 游玩
-                </a>
-              )}
-              {selectedProject.githubUrl && (
-                <a
-                  href={selectedProject.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="modal-btn modal-btn-github"
-                >
-                  📂 了解详情
-                </a>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
 
       <footer className="footer">
         <p>© 2026 欧阳志胜 · AI游戏开发</p>
