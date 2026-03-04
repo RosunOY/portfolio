@@ -50,8 +50,8 @@ const projects: Project[] = [
   {
     name: "真相游戏 (Truth Game)",
     description: "AI裁判社交推理游戏 - 融合鹅鸭杀身份博弈与真心话大冒险",
-    tech: ["Node.js", "Express", "AI对话系统"],
-    highlight: "策划中",
+    tech: ["Node.js", "Express", "Socket.io", "AI对话系统"],
+    highlight: "独立开发",
     category: "game",
     url: "https://github.com/RosunOY/Truth_game",
   },
