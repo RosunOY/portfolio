@@ -34,9 +34,9 @@ const projects: Project[] = [
     description:
       "逆向塔防策略游戏 - 指挥进攻部队突破AI防线，Gemini AI实时决策防御",
     tech: ["JavaScript", "Canvas", "Gemini API"],
-    highlight: "AI对战",
+    highlight: "在线试玩",
     category: "game",
-    url: "https://github.com/RosunOY/Save_human",
+    url: "https://save-human.vercel.app/",
   },
   {
     name: "商道世家",
