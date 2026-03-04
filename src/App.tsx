@@ -75,6 +75,7 @@ const projects: Project[] = [
     ],
     highlight: "AI应用",
     category: "ai",
+    githubUrl: "https://github.com/RosunOY/SmartPestos",
   },
 ];
 
