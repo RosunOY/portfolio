@@ -43,9 +43,9 @@ const projects: Project[] = [
     description:
       "AI商业模拟经营游戏 - 15种商业设施、20+员工职业、9级营地升级体系",
     tech: ["React", "Vite", "Google Gemini API"],
-    highlight: "独立开发",
+    highlight: "在线试玩",
     category: "game",
-    url: "https://github.com/RosunOY/manage_game",
+    url: "https://manage-game-lime.vercel.app/",
   },
   {
     name: "真相游戏 (Truth Game)",
