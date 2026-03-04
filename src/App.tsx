@@ -8,6 +8,7 @@ interface Project {
   highlight?: string;
   category?: "game" | "ai" | "web";
   url?: string;
+  githubUrl?: string;
 }
 
 const projects: Project[] = [
@@ -19,6 +20,7 @@ const projects: Project[] = [
     highlight: "在线试玩",
     category: "game",
     url: "https://echoes-of-ecology.vercel.app/",
+    githubUrl: "https://github.com/RosunOY/echoes-of-ecology",
   },
   {
     name: "人类曙光 (Dawn of Humanity)",
@@ -28,6 +30,7 @@ const projects: Project[] = [
     highlight: "在线试玩",
     category: "game",
     url: "https://dawn-of-humanity-game.vercel.app/",
+    githubUrl: "https://github.com/RosunOY/Dawn_of_humanity_game",
   },
   {
     name: "拯救人类 (Save Human)",
@@ -37,6 +40,7 @@ const projects: Project[] = [
     highlight: "在线试玩",
     category: "game",
     url: "https://save-human.vercel.app/",
+    githubUrl: "https://github.com/RosunOY/Save_human",
   },
   {
     name: "商道世家",
@@ -46,6 +50,7 @@ const projects: Project[] = [
     highlight: "在线试玩",
     category: "game",
     url: "https://manage-game-lime.vercel.app/",
+    githubUrl: "https://github.com/RosunOY/manage_game",
   },
   {
     name: "真相游戏 (Truth Game)",
@@ -54,6 +59,7 @@ const projects: Project[] = [
     highlight: "独立开发",
     category: "game",
     url: "https://github.com/RosunOY/Truth_game",
+    githubUrl: "https://github.com/RosunOY/Truth_game",
   },
   {
     name: "智慧农业病虫害识别系统",
@@ -90,9 +96,20 @@ function App() {
     "home",
   );
   const [filter, setFilter] = useState<"all" | "game" | "ai">("all");
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filteredProjects =
     filter === "all" ? projects : projects.filter((p) => p.category === filter);
+
+  const handleProjectClick = (project: Project) => {
+    if (project.url || project.githubUrl) {
+      setSelectedProject(project);
+    }
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
 
   return (
     <div className="app">
@@ -174,12 +191,10 @@ function App() {
             </div>
             <div className="project-list">
               {filteredProjects.map((project, index) => (
-                <a
+                <div
                   key={index}
-                  href={project.url || "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="project-card"
+                  onClick={() => handleProjectClick(project)}
                 >
                   <div className="project-header">
                     <h3>{project.name}</h3>
@@ -195,7 +210,7 @@ function App() {
                       </span>
                     ))}
                   </div>
-                </a>
+                </div>
               ))}
             </div>
           </section>
@@ -221,6 +236,41 @@ function App() {
           </section>
         )}
       </main>
+
+      {/* 项目选择弹窗 */}
+      {selectedProject && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal}>
+              ×
+            </button>
+            <h3>{selectedProject.name}</h3>
+            <p className="modal-desc">{selectedProject.description}</p>
+            <div className="modal-actions">
+              {selectedProject.url && (
+                <a
+                  href={selectedProject.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal-btn modal-btn-play"
+                >
+                  🎮 游玩
+                </a>
+              )}
+              {selectedProject.githubUrl && (
+                <a
+                  href={selectedProject.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal-btn modal-btn-github"
+                >
+                  📂 了解详情
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       <footer className="footer">
         <p>© 2026 欧阳志胜 · AI游戏开发</p>
