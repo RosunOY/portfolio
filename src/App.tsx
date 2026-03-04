@@ -16,18 +16,18 @@ const projects: Project[] = [
     description:
       'AI语义演化沙盒游戏 - 概念卡牌引导文明演化，LLM作为"物理引擎"决定游戏结果',
     tech: ["Three.js", "Express", "Gemini API", "JavaScript"],
-    highlight: "48小时极限开发",
+    highlight: "在线试玩",
     category: "game",
-    url: "https://github.com/RosunOY/echoes-of-ecology",
+    url: "https://echoes-of-ecology.vercel.app/",
   },
   {
     name: "人类曙光 (Dawn of Humanity)",
     description:
       "赛博朋克风格横版动作RPG - 13个关卡、连招技能系统、AI敌人、RPG成长元素",
     tech: ["Canvas", "Vanilla JavaScript", "Web Audio API", "LocalStorage"],
-    highlight: "独立开发",
+    highlight: "在线试玩",
     category: "game",
-    url: "https://github.com/RosunOY/Dawn_of_humanity_game",
+    url: "https://dawn-of-humanity-game.vercel.app/",
   },
   {
     name: "拯救人类 (Save Human)",
