@@ -25,9 +25,9 @@ const projects: Project[] = [
     description:
       "赛博朋克风格横版动作RPG - 13个关卡、连招技能系统、AI敌人、RPG成长元素",
     tech: ["Canvas", "Vanilla JavaScript", "Web Audio API", "LocalStorage"],
-    highlight: "独立开发",
+    highlight: "在线试玩",
     category: "game",
-    url: "https://github.com/RosunOY/Dawn_of_humanity_game",
+    url: "https://dawn-of-humanity-game.vercel.app/",
   },
   {
     name: "拯救人类 (Save Human)",
