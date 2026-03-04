@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 interface Project {
@@ -97,13 +97,22 @@ function App() {
     "home",
   );
   const [filter, setFilter] = useState<"all" | "game" | "ai">("all");
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const filteredProjects =
     filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <div className="app">
-      <nav className="nav">
+      <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
         <div className="nav-content">
           <div className="logo">OZY</div>
           <div className="nav-links">
@@ -133,13 +142,19 @@ function App() {
         {activeTab === "home" && (
           <section className="hero">
             <div className="hero-content">
+              <div className="hero-badge">
+                <span></span>
+                湖南农业大学 · 计算机科学与技术
+              </div>
               <div className="avatar">
                 <span>欧阳</span>
               </div>
-              <h1>欧阳志胜</h1>
-              <p className="title">AI游戏开发</p>
-              <p className="subtitle">湖南农业大学 · 计算机科学与技术</p>
-              <div className="contact">
+              <h1>
+                欧阳<span className="highlight">志胜</span>
+              </h1>
+              <p className="title">AI游戏开发 & 全栈工程师</p>
+              <p className="subtitle">探索 AI 与游戏的无限可能</p>
+              <div className="hero-contact">
                 <a href="mailto:2742760385@qq.com" className="contact-item">
                   <span className="icon">✉</span> 2742760385@qq.com
                 </a>
@@ -147,11 +162,16 @@ function App() {
                   <span className="icon">📱</span> 19174654127
                 </span>
               </div>
-              <div className="tags">
+              <div className="hero-tags">
                 <span className="tag">AI游戏开发</span>
                 <span className="tag">Three.js</span>
                 <span className="tag">LLM</span>
+                <span className="tag">React</span>
               </div>
+            </div>
+            <div className="scroll-indicator">
+              <div className="mouse"></div>
+              <span>向下滚动</span>
             </div>
           </section>
         )}
@@ -159,6 +179,9 @@ function App() {
         {activeTab === "projects" && (
           <section className="projects">
             <h2>项目经历</h2>
+            <p className="projects-subtitle">
+              从游戏开发到 AI 应用，这里是我近年来的技术探索
+            </p>
             <div className="filter-bar">
               <button
                 className={`filter-btn ${filter === "all" ? "active" : ""}`}
@@ -227,6 +250,7 @@ function App() {
         {activeTab === "skills" && (
           <section className="skills">
             <h2>专业技能</h2>
+            <p className="skills-subtitle">持续学习，不断精进</p>
             <div className="skills-grid">
               {skills.map((skill, index) => (
                 <div key={index} className="skill-card">
