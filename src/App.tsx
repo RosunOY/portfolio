@@ -158,16 +158,16 @@ function App() {
         {activeTab === "home" && (
           <section className="hero">
             <div className="hero-content">
-              <div className="hero-badge">
-                <span></span>
-                湖南农业大学 · 计算机科学与技术
-              </div>
               <div className="avatar">
-                <span>欧阳</span>
+                <img src="/portfolio/照片.png" alt="欧阳志胜" />
               </div>
               <h1>
                 欧阳<span className="highlight">志胜</span>
               </h1>
+              <div className="hero-badge">
+                <span></span>
+                湖南农业大学 · 计算机科学与技术
+              </div>
               <p className="title">AI游戏开发 & 全栈工程师 & 游戏策划</p>
               <p className="subtitle">探索 AI 与游戏的无限可能</p>
               <div className="hero-contact">
