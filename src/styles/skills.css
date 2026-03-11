@@ -1,13 +1,15 @@
 /* Skills Page */
 .skills {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 6rem 2rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 6rem 4rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   background:
     linear-gradient(
       180deg,
@@ -129,8 +131,10 @@
 /* Skills Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
+  width: 100%;
+  max-width: 1600px;
 }
 
 /* Skill Card */
