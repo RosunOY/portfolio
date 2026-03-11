@@ -111,19 +111,20 @@ const skills: Skill[] = [
   },
   {
     category: "编程语言",
-    items: [
-      "Python",
-      "Java",
-      "C/C++",
-      "JavaScript",
-      "TypeScript",
-      "Go",
-      "Rust",
-    ],
+    items: ["Python", "Java", "C/C++", "JavaScript", "TypeScript"],
   },
   {
     category: "开发工具",
-    items: ["Git", "Maven", "Docker", "Linux", "Hadoop", "Claude Code"],
+    items: [
+      "Git",
+      "Maven",
+      "Docker",
+      "Linux",
+      "Hadoop",
+      "Claude Code",
+      "Cursor",
+      "Trae",
+    ],
   },
   {
     category: "游戏策划",
