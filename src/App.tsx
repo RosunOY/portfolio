@@ -131,10 +131,17 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: "本科在读",
+    title: "本科",
     organization: "湖南农业大学",
     period: "2023.09 - 2027.06",
     description: "计算机科学与技术专业",
+    type: "education",
+  },
+  {
+    title: "校园经历",
+    organization: "湖南农业大学",
+    period: "2023 - 至今",
+    description: "班级副班长（兼就业创业委员）、蝰蛇网络安全实验室负责人",
     type: "education",
   },
   {
