@@ -189,7 +189,7 @@ const experiences: Experience[] = [
     organization: "个人喜好",
     period: "持续至今",
     description:
-      "喜欢健身（1年+）、听音乐、看电影、唱歌、玩游戏、vibe coding、写游戏策划案",
+      "喜欢健身（1年+）、听音乐、看电影、看动漫（剑来、凡人修仙传、吞噬星空等国漫）、看小说、唱歌、玩游戏、vibe coding、写游戏策划案\n喜欢单依纯、张起灵",
     type: "hobby",
   },
 ];
