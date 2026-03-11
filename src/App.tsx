@@ -282,8 +282,7 @@ function App() {
                 <span></span>
                 湖南农业大学 · 计算机科学与技术
               </div>
-              <p className="title">AI游戏开发 & 全栈工程师 & 游戏策划</p>
-              <p className="subtitle">探索 AI 与游戏的无限可能</p>
+              <p className="title">博学之，审问之，慎思之，明辨之，笃行之</p>
               <div className="hero-contact">
                 <a href="mailto:2742760385@qq.com" className="contact-item">
                   <span className="icon">✉</span> 2742760385@qq.com
@@ -310,10 +309,10 @@ function App() {
               </div>
               <div className="hero-tags">
                 <span className="tag">AI游戏开发</span>
-                <span className="tag">Three.js</span>
                 <span className="tag">LLM</span>
-                <span className="tag">React</span>
                 <span className="tag">游戏策划</span>
+                <span className="tag">全栈工程师</span>
+                <span className="tag">探索 AI 与游戏的无限可能</span>
               </div>
             </div>
             <div className="scroll-indicator">
@@ -416,7 +415,7 @@ function App() {
         {activeTab === "skills" && (
           <section className="skills">
             <h2>专业技能</h2>
-            <p className="skills-subtitle">持续学习，不断精进</p>
+            <p className="skills-subtitle">自强不息，持之以恒</p>
             <div className="skills-grid">
               {skills.map((skill, index) => (
                 <div
