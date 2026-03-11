@@ -259,25 +259,38 @@ function App() {
                     ))}
                   </div>
                   <div className="project-actions">
-                    {project.url && (
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-btn project-btn-play"
-                      >
-                        🎮 游玩
-                      </a>
-                    )}
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-btn project-btn-github"
-                      >
-                        📂 详情
-                      </a>
+                    {project.category === "design" ? (
+                      <div className="project-wechat-tip">
+                        <img
+                          src="/portfolio/wechat-qrcode.jpg"
+                          alt="微信公众号二维码"
+                          className="project-wechat-qrcode"
+                        />
+                        <span>扫码关注公众号查看更多内容</span>
+                      </div>
+                    ) : (
+                      <>
+                        {project.url && (
+                          <a
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="project-btn project-btn-play"
+                          >
+                            🎮 游玩
+                          </a>
+                        )}
+                        {project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="project-btn project-btn-github"
+                          >
+                            📂 详情
+                          </a>
+                        )}
+                      </>
                     )}
                   </div>
                 </div>
