@@ -200,27 +200,32 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary),
-    var(--accent)
-  );
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  height: 2px;
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow:
     0 25px 50px -12px rgba(0, 0, 0, 0.15),
-    0 0 30px rgba(200, 200, 220, 0.3);
-  border-color: rgba(200, 200, 220, 0.4);
+    0 0 40px rgba(200, 200, 220, 0.4),
+    0 0 80px rgba(200, 200, 220, 0.2),
+    inset 0 0 30px rgba(200, 200, 220, 0.05);
+  border-color: rgba(200, 200, 220, 0.5);
 }
 
 .project-card:hover::before {
-  transform: scaleX(1);
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(200, 200, 220, 0.8),
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 220, 0.8),
+    transparent
+  );
+  box-shadow: 0 0 20px rgba(200, 200, 220, 0.5);
 }
 
 .project-header {
