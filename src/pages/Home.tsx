@@ -10,11 +10,19 @@ export default function Home() {
         </h1>
         <div className="hero-info-grid">
           <div className="hero-info-item">
-            <span className="hero-info-icon">📍</span>
+            <img
+              src="/portfolio/城市.png"
+              alt="故乡"
+              className="hero-info-icon"
+            />
             <span>湖南永州</span>
           </div>
           <div className="hero-info-item">
-            <span className="hero-info-icon">🎂</span>
+            <img
+              src="/portfolio/cake-icon.png"
+              alt="生日"
+              className="hero-info-icon"
+            />
             <span>2004.09.17</span>
           </div>
         </div>

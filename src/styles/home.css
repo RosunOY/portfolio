@@ -213,6 +213,9 @@
 
 .hero-info-icon {
   font-size: 1rem;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
 /* Hero Badge */
