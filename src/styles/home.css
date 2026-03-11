@@ -236,11 +236,9 @@
   box-shadow: 0 0 10px #22c55e;
 }
 
-.hero-education-period {
-  font-size: 0.95rem;
-  color: #a0a0a0;
-  margin-bottom: 1rem;
-  animation: fadeInUp 0.6s ease 0.35s both;
+.hero-badge .education-period {
+  display: block;
+  margin-top: 0.25rem;
 }
 
 /* Title */
