@@ -91,6 +91,16 @@ const skills = [
   { category: "编程语言", items: ["Python", "Java", "C/C++", "JavaScript"] },
   { category: "开发工具", items: ["Git", "Maven", "Docker", "Claude Code"] },
   {
+    category: "游戏策划",
+    items: [
+      "游戏系统设计",
+      "数值体系搭建",
+      "玩法原型设计",
+      "玩家体验优化",
+      "商业化设计",
+    ],
+  },
+  {
     category: "公众号",
     items: ["为有源头游戏来"],
     isWechat: true,
@@ -173,6 +183,7 @@ function App() {
                 <span className="tag">Three.js</span>
                 <span className="tag">LLM</span>
                 <span className="tag">React</span>
+                <span className="tag">游戏策划</span>
               </div>
             </div>
             <div className="scroll-indicator">
