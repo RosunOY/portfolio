@@ -836,6 +836,138 @@
   font-weight: 500;
 }
 
+/* Experience */
+.experience {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  background:
+    radial-gradient(
+      ellipse at 30% 20%,
+      rgba(236, 72, 153, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 70% 80%,
+      rgba(59, 130, 246, 0.15) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.experience::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(
+      1px 1px at 50px 100px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 200px 50px,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 350px 150px,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    );
+  background-size: 400px 200px;
+  animation: starTwinkle 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+.experience h2,
+.experience-subtitle,
+.experience-timeline {
+  position: relative;
+  z-index: 1;
+}
+
+.experience h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.experience-subtitle {
+  text-align: center;
+  color: #a0a0a0;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-card {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(30, 30, 50, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(100, 150, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateX(10px);
+  border-color: rgba(100, 150, 255, 0.4);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+}
+
+.experience-period {
+  min-width: 120px;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+.experience-org {
+  font-size: 1rem;
+  color: #60a5fa;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.experience-desc {
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
 /* Skills */
 .skills {
   max-width: 1200px;

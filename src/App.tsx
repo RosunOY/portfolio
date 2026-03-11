@@ -221,10 +221,42 @@ const skills = [
   },
 ];
 
+// Experience data
+const experiences = [
+  {
+    title: "本科在读",
+    organization: "湖南农业大学",
+    period: "2023.09 - 2027.06",
+    description: "计算机科学与技术专业",
+    type: "education",
+  },
+  {
+    title: "AI游戏开发",
+    organization: "个人项目",
+    period: "2024 - 至今",
+    description: "开发多款AI游戏，包括生态回响、人类曙光、拯救人类等",
+    type: "project",
+  },
+  {
+    title: "全栈开发",
+    organization: "技术实践",
+    period: "2023 - 至今",
+    description: "熟练掌握React、Vite、Node.js等全栈技术",
+    type: "skill",
+  },
+  {
+    title: "游戏策划",
+    organization: "公众号运营",
+    period: "2024 - 至今",
+    description: "运营微信公众号「为有源头游戏来」，分享游戏设计理念",
+    type: "project",
+  },
+];
+
 function App() {
-  const [activeTab, setActiveTab] = useState<"home" | "projects" | "skills">(
-    "home",
-  );
+  const [activeTab, setActiveTab] = useState<
+    "home" | "projects" | "skills" | "experience"
+  >("home");
   const [filter, setFilter] = useState<"all" | "game" | "ai" | "design">("all");
   const [scrolled, setScrolled] = useState(false);
 
@@ -263,6 +295,12 @@ function App() {
               onClick={() => setActiveTab("skills")}
             >
               技能
+            </button>
+            <button
+              className={`nav-link ${activeTab === "experience" ? "active" : ""}`}
+              onClick={() => setActiveTab("experience")}
+            >
+              经历
             </button>
           </div>
         </div>
@@ -467,6 +505,25 @@ function App() {
                       ))}
                     </div>
                   )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {activeTab === "experience" && (
+          <section className="experience">
+            <h2>个人经历</h2>
+            <p className="experience-subtitle">自强不息，持之以恒</p>
+            <div className="experience-timeline">
+              {experiences.map((exp, index) => (
+                <div key={index} className="experience-card">
+                  <div className="experience-period">{exp.period}</div>
+                  <div className="experience-content">
+                    <h3>{exp.title}</h3>
+                    <p className="experience-org">{exp.organization}</p>
+                    <p className="experience-desc">{exp.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
