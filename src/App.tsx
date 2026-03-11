@@ -142,21 +142,21 @@ const experiences: Experience[] = [
     organization: "个人项目",
     period: "2024 - 至今",
     description: "开发多款AI游戏，包括生态回响、人类曙光、拯救人类等",
-    type: "project",
+    type: "game",
   },
   {
     title: "全栈开发",
     organization: "技术实践",
     period: "2023 - 至今",
     description: "熟练掌握React、Vite、Node.js等全栈技术",
-    type: "skill",
+    type: "web",
   },
   {
     title: "游戏策划",
     organization: "公众号运营",
     period: "2024 - 至今",
     description: "运营微信公众号「为有源头游戏来」，分享游戏设计理念",
-    type: "project",
+    type: "design",
   },
 ];
 
@@ -188,7 +188,28 @@ function App() {
       case "skills":
         return <Skills skills={skills} />;
       case "experience":
-        return <Experience experiences={experiences} />;
+        return (
+          <Experience
+            experiences={experiences}
+            onCardClick={(type) => {
+              if (type === "education") {
+                setActiveTab("home");
+              } else if (type === "game") {
+                setActiveTab("projects");
+                setFilter("game");
+              } else if (type === "design") {
+                setActiveTab("projects");
+                setFilter("design");
+              } else if (type === "web") {
+                setActiveTab("projects");
+                setFilter("all");
+              } else {
+                setActiveTab("projects");
+                setFilter("all");
+              }
+            }}
+          />
+        );
       default:
         return <Home />;
     }

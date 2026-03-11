@@ -8,16 +8,24 @@ interface Experience {
 
 interface ExperienceProps {
   experiences: Experience[];
+  onCardClick: (type: string) => void;
 }
 
-export default function Experience({ experiences }: ExperienceProps) {
+export default function Experience({
+  experiences,
+  onCardClick,
+}: ExperienceProps) {
   return (
     <section className="experience">
       <h2>个人经历</h2>
       <p className="experience-subtitle">自强不息，持之以恒</p>
       <div className="experience-timeline">
         {experiences.map((exp, index) => (
-          <div key={index} className="experience-card">
+          <div
+            key={index}
+            className="experience-card"
+            onClick={() => onCardClick(exp.type)}
+          >
             <div className="experience-period">{exp.period}</div>
             <div className="experience-content">
               <h3>{exp.title}</h3>
