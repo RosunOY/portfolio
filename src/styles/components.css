@@ -87,7 +87,7 @@
   padding: 3rem 2rem;
   background: linear-gradient(180deg, #0a0a0f 0%, #050508 100%);
   color: rgba(255, 255, 255, 0.6);
-  border-top: 1px solid rgba(100, 150, 255, 0.1);
+  border-top: 1px solid rgba(80, 80, 80, 0.2);
 }
 
 .footer p {
