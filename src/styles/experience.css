@@ -240,6 +240,24 @@
   gap: 1.5rem;
   width: 100%;
   max-width: 1200px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(80, 80, 80, 0.6) 10%,
+    rgba(80, 80, 80, 0.6) 90%,
+    transparent
+  );
 }
 
 /* Experience Card */
@@ -252,6 +270,20 @@
   border-radius: 16px;
   border: 1px solid rgba(80, 80, 80, 0.3);
   transition: all 0.3s ease;
+  position: relative;
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(200, 200, 220, 0.5);
 }
 
 .experience-card:hover {
@@ -261,6 +293,13 @@
     0 8px 30px rgba(0, 0, 0, 0.15),
     0 0 30px rgba(200, 200, 220, 0.2),
     0 0 40px rgba(200, 200, 220, 0.1);
+}
+
+.experience-card:hover::before {
+  background: linear-gradient(135deg, #e8e8e8 0%, #ffffff 100%);
+  box-shadow:
+    0 0 20px rgba(200, 200, 220, 0.8),
+    0 0 30px rgba(200, 200, 220, 0.5);
 }
 
 .experience-period {
