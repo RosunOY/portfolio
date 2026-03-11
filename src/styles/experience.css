@@ -309,7 +309,32 @@
 .experience-period {
   min-width: 120px;
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 40% 60%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(
+      1.5px 1.5px at 60% 20%,
+      rgba(255, 255, 255, 1),
+      transparent
+    ),
+    radial-gradient(1px 1px at 80% 50%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 25% 70%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 70% 80%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(
+      1.5px 1.5px at 50% 90%,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    ),
+    linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%;
   border-radius: 8px;
   font-size: 0.9rem;
   color: #e0e0e0;
@@ -317,6 +342,10 @@
   text-align: center;
   display: flex;
   align-items: center;
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.2),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+  animation: starTwinkle 3s ease-in-out infinite;
 }
 
 .experience-content {
