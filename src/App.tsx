@@ -184,6 +184,14 @@ const experiences: Experience[] = [
     description: "运营微信公众号「为有源头游戏来」，分享游戏设计理念",
     type: "design",
   },
+  {
+    title: "兴趣爱好",
+    organization: "个人喜好",
+    period: "持续至今",
+    description:
+      "喜欢健身（1年+）、听音乐、看电影、唱歌、玩游戏、vibe coding、写游戏策划案",
+    type: "hobby",
+  },
 ];
 
 function App() {
@@ -229,6 +237,8 @@ function App() {
               } else if (type === "web") {
                 setActiveTab("projects");
                 setFilter("all");
+              } else if (type === "hobby") {
+                // 兴趣爱好不跳转
               } else {
                 setActiveTab("projects");
                 setFilter("all");
