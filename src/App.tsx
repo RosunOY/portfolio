@@ -131,10 +131,10 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: "本科",
+    title: "教育经历",
     organization: "湖南农业大学",
     period: "2023.09 - 2027.06",
-    description: "计算机科学与技术专业",
+    description: "本科 - 计算机科学与技术专业",
     type: "education",
   },
   {
