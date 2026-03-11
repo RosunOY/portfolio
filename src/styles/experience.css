@@ -455,6 +455,20 @@
   line-height: 1.6;
 }
 
+.experience-desc:has(🎮) {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1) 0%,
+    rgba(200, 200, 220, 0.1) 100%
+  );
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: #e0e0e0;
+  font-weight: 500;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
 .experience-link {
   display: inline-flex;
   align-items: center;
