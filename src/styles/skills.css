@@ -172,7 +172,10 @@
 
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 0 30px rgba(200, 200, 220, 0.3);
+  border-color: rgba(200, 200, 220, 0.4);
 }
 
 .skill-card h3 {

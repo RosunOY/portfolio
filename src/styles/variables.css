@@ -100,3 +100,13 @@ body {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+
+/* Silver shimmer effect */
+@keyframes silverShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}

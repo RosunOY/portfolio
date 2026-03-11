@@ -137,16 +137,19 @@
 
 .experience-card:hover {
   transform: translateX(10px);
-  border-color: rgba(100, 150, 255, 0.4);
-  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+  border-color: rgba(200, 200, 220, 0.4);
+  box-shadow:
+    0 8px 30px rgba(200, 200, 220, 0.2),
+    0 0 20px rgba(200, 200, 220, 0.2);
 }
 
 .experience-period {
   min-width: 120px;
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 100%);
   border-radius: 8px;
   font-size: 0.9rem;
+  color: #1a1a2e;
   font-weight: 600;
   color: white;
   text-align: center;
