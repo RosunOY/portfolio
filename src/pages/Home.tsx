@@ -1,4 +1,14 @@
+import { useState } from "react";
+
 export default function Home() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("2742760385@qq.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <section className="hero">
       <div className="hero-content">
@@ -37,14 +47,18 @@ export default function Home() {
         </div>
         <p className="title">博学之，审问之，慎思之，明辨之，笃行之</p>
         <div className="hero-contact">
-          <a href="mailto:2742760385@qq.com" className="contact-item">
+          <span
+            className="contact-item"
+            onClick={handleCopyEmail}
+            style={{ cursor: "pointer" }}
+          >
             <img
               src="/portfolio/QQ邮箱.png"
               alt="邮箱"
               className="platform-icon"
-            />{" "}
-            2742760385@qq.com
-          </a>
+            />
+            {copied ? "已复制!" : "2742760385@qq.com"}
+          </span>
           <span className="contact-item">
             <img
               src="/portfolio/电话图标.png"
