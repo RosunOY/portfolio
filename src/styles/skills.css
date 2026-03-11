@@ -167,11 +167,11 @@
 .skill-card:hover {
   transform: translateY(-5px);
   box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.3),
-    0 0 80px rgba(50, 50, 50, 0.2),
-    inset 0 0 50px rgba(0, 0, 0, 0.1);
-  border-color: rgba(100, 100, 100, 0.5);
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 0 40px rgba(200, 200, 220, 0.4),
+    0 0 80px rgba(200, 200, 220, 0.2),
+    inset 0 0 30px rgba(200, 200, 220, 0.05);
+  border-color: rgba(200, 200, 220, 0.5);
 }
 
 .skill-card:hover::before {
@@ -179,12 +179,12 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(80, 80, 80, 0.8),
-    rgba(120, 120, 120, 0.9),
-    rgba(80, 80, 80, 0.8),
+    rgba(200, 200, 220, 0.8),
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 220, 0.8),
     transparent
   );
-  box-shadow: 0 0 15px rgba(80, 80, 80, 0.4);
+  box-shadow: 0 0 20px rgba(200, 200, 220, 0.5);
 }
 
 .skill-card h3 {

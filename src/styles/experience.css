@@ -137,11 +137,11 @@
 
 .experience-card:hover {
   transform: translateX(10px);
-  border-color: rgba(100, 100, 100, 0.5);
+  border-color: rgba(200, 200, 220, 0.5);
   box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.3),
-    0 0 30px rgba(50, 50, 50, 0.2),
-    0 0 40px rgba(30, 30, 30, 0.1);
+    0 8px 30px rgba(0, 0, 0, 0.15),
+    0 0 30px rgba(200, 200, 220, 0.2),
+    0 0 40px rgba(200, 200, 220, 0.1);
 }
 
 .experience-period {
