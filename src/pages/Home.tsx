@@ -33,7 +33,7 @@ export default function Home() {
             <span className="icon">✉</span> 2742760385@qq.com
           </a>
           <span className="contact-item">
-            <span className="icon">📱</span> 19174654127
+            <span className="icon">☎</span> 19174654127
           </span>
           <a
             href="https://github.com/RosunOY"
