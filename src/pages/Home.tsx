@@ -41,7 +41,12 @@ export default function Home() {
             rel="noopener noreferrer"
             className="contact-item"
           >
-            <span className="icon">🐙</span> GitHub
+            <img
+              src="/portfolio/GitHub图标.png"
+              alt="GitHub"
+              className="platform-icon"
+            />{" "}
+            GitHub
           </a>
           <a
             href="https://gitee.com/ouyangzhisheng"
@@ -49,7 +54,12 @@ export default function Home() {
             rel="noopener noreferrer"
             className="contact-item"
           >
-            <span className="icon">🐱</span> Gitee
+            <img
+              src="/portfolio/gitee图标.png"
+              alt="Gitee"
+              className="platform-icon"
+            />{" "}
+            Gitee
           </a>
         </div>
         <div className="hero-tags">

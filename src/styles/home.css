@@ -298,6 +298,12 @@
   font-size: 1.1rem;
 }
 
+.contact-item .platform-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 /* Hero Tags */
 .hero-tags {
   display: flex;
