@@ -82,7 +82,12 @@ export default function Projects({
                       rel="noopener noreferrer"
                       className="project-btn project-btn-play"
                     >
-                      🎮 游玩
+                      <img
+                        src="/portfolio/休闲娱乐.png"
+                        alt="游玩"
+                        className="project-btn-icon"
+                      />{" "}
+                      游玩
                     </a>
                   )}
                   {project.githubUrl && (
