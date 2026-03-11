@@ -39,7 +39,7 @@ export default function Home() {
           </a>
           <span className="contact-item">
             <img
-              src="/portfolio/拨号图标.png"
+              src="/portfolio/电话图标.png"
               alt="电话"
               className="platform-icon"
             />{" "}
