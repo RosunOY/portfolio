@@ -157,7 +157,8 @@ const experiences: Experience[] = [
     title: "全栈开发",
     organization: "技术实践",
     period: "2023 - 至今",
-    description: "熟练掌握React、Vite、Node.js等全栈技术",
+    description:
+      "React / Vite / Vue3 / Node.js / Express / TypeScript / Python / Docker / Git",
     type: "web",
   },
   {
