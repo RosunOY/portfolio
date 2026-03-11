@@ -93,6 +93,9 @@ const skills = [
   {
     category: "游戏策划",
     items: ["游戏系统设计", "数值体系搭建", "玩法原型设计", "玩家体验优化"],
+    isDesign: true,
+    qrcode: "/portfolio/wechat-qrcode.jpg",
+    wechatName: "为有源头游戏来",
   },
 ];
 
@@ -274,15 +277,41 @@ function App() {
             <p className="skills-subtitle">持续学习，不断精进</p>
             <div className="skills-grid">
               {skills.map((skill, index) => (
-                <div key={index} className="skill-card">
+                <div
+                  key={index}
+                  className={`skill-card ${skill.isDesign ? "skill-card-wechat" : ""}`}
+                >
                   <h3>{skill.category}</h3>
-                  <div className="skill-items">
-                    {skill.items.map((item, i) => (
-                      <span key={i} className="skill-item">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                  {skill.isDesign ? (
+                    <div className="wechat-content">
+                      <div className="design-items">
+                        {skill.items.map((item, i) => (
+                          <span key={i} className="skill-item">
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="wechat-promo">
+                        <img
+                          src={skill.qrcode}
+                          alt="微信公众号二维码"
+                          className="wechat-qrcode"
+                        />
+                        <p className="wechat-name">{skill.wechatName}</p>
+                        <p className="wechat-hint">
+                          更多文章信息可关注微信公众号查看
+                        </p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="skill-items">
+                      {skill.items.map((item, i) => (
+                        <span key={i} className="skill-item">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
