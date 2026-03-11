@@ -1,9 +1,9 @@
 /* Projects Page */
 .projects {
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 6rem 2rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 6rem 4rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -282,9 +282,10 @@
 /* Project List */
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 2rem;
   width: 100%;
+  max-width: 1800px;
 }
 
 /* Project Card */
