@@ -246,15 +246,16 @@
 
 .highlight {
   padding: 0.35rem 0.85rem;
-  background: linear-gradient(135deg, #c0c0c0 0%, #ffffff 50%, #e8e8e8 100%);
+  background: linear-gradient(135deg, #ffd700 0%, #ffec8b 50%, #ffd700 100%);
   border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 600;
   color: #1a1a2e;
   white-space: nowrap;
   box-shadow:
-    0 0 15px rgba(200, 200, 220, 0.5),
-    0 0 30px rgba(200, 200, 220, 0.3);
+    0 0 15px rgba(255, 215, 0, 0.6),
+    0 0 30px rgba(255, 215, 0, 0.4),
+    0 0 50px rgba(255, 215, 0, 0.2);
   animation: starTwinkle 2s ease-in-out infinite;
 }
 
