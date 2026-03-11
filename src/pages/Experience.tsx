@@ -31,7 +31,9 @@ export default function Experience({
             <div className="experience-content">
               <h3>{exp.title}</h3>
               <p className="experience-org">{exp.organization}</p>
-              <p className="experience-desc">{exp.description}</p>
+              <p className="experience-desc" style={{ whiteSpace: "pre-line" }}>
+                {exp.description}
+              </p>
               {exp.link && (
                 <a
                   href={exp.link}
