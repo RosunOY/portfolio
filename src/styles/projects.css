@@ -5,6 +5,13 @@
   padding: 6rem 2rem;
   min-height: 100vh;
   background:
+    linear-gradient(
+      180deg,
+      rgba(10, 10, 15, 0.85) 0%,
+      rgba(26, 26, 46, 0.85) 50%,
+      rgba(10, 10, 15, 0.9) 100%
+    ),
+    url("/portfolio/流浪地球.png") no-repeat center center / cover,
     radial-gradient(
       ellipse at 30% 20%,
       rgba(139, 92, 246, 0.2) 0%,
