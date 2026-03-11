@@ -109,8 +109,22 @@ const skills: Skill[] = [
     category: "AI技术",
     items: ["LLM API (Gemini/DeepSeek/GLM)", "YOLOv8", "PyTorch", "Gradio"],
   },
-  { category: "编程语言", items: ["Python", "Java", "C/C++", "JavaScript"] },
-  { category: "开发工具", items: ["Git", "Maven", "Docker", "Claude Code"] },
+  {
+    category: "编程语言",
+    items: [
+      "Python",
+      "Java",
+      "C/C++",
+      "JavaScript",
+      "TypeScript",
+      "Go",
+      "Rust",
+    ],
+  },
+  {
+    category: "开发工具",
+    items: ["Git", "Maven", "Docker", "Linux", "Hadoop", "Claude Code"],
+  },
   {
     category: "游戏策划",
     items: ["游戏系统设计", "数值体系搭建", "玩法原型设计", "玩家体验优化"],
