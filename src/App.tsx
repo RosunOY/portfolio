@@ -158,7 +158,7 @@ const experiences: Experience[] = [
     organization: "技术实践",
     period: "2023 - 至今",
     description:
-      "React / Vite / Vue3 / Node.js / Express / TypeScript / Python / Docker / Git",
+      "React / Vite / Vue3 / Node.js / Express / TypeScript / Python / Java / Spring Boot / Docker / Git / C/C++ / Hadoop / Linux",
     type: "web",
   },
   {
