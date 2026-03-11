@@ -147,7 +147,7 @@ const experiences: Experience[] = [
   {
     title: "AI游戏开发",
     organization: "个人项目",
-    period: "2024 - 至今",
+    period: "2025 - 至今",
     description: "开发多款AI游戏，包括生态回响、人类曙光、拯救人类等",
     type: "game",
   },
