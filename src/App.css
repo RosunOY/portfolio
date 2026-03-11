@@ -19,7 +19,13 @@
 
 .app {
   min-height: 100vh;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   background: var(--light);
   color: var(--dark);
 }
@@ -79,7 +85,7 @@
 }
 
 .nav-link::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -118,16 +124,28 @@
   justify-content: center;
   padding: 2rem;
   background:
-    radial-gradient(ellipse at 20% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba(20, 184, 166, 0.05) 0%, transparent 70%),
+    radial-gradient(
+      ellipse at 20% 80%,
+      rgba(99, 102, 241, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(236, 72, 153, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 50% 50%,
+      rgba(20, 184, 166, 0.05) 0%,
+      transparent 70%
+    ),
     var(--light);
   position: relative;
   overflow: hidden;
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -202,8 +220,13 @@
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .hero h1 {
@@ -279,7 +302,11 @@
 
 .tag {
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(236, 72, 153, 0.1) 100%
+  );
   border-radius: 8px;
   font-size: 0.85rem;
   color: var(--primary);
@@ -311,7 +338,7 @@
 }
 
 .scroll-indicator .mouse::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 6px;
   left: 50%;
@@ -324,13 +351,25 @@
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(10px); }
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
 }
 
 @keyframes scrollMouse {
-  0%, 100% { opacity: 1; top: 6px; }
-  50% { opacity: 0.5; top: 16px; }
+  0%,
+  100% {
+    opacity: 1;
+    top: 6px;
+  }
+  50% {
+    opacity: 0.5;
+    top: 16px;
+  }
 }
 
 /* Projects */
@@ -382,7 +421,11 @@
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
   color: white;
   box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
 }
@@ -404,13 +447,18 @@
 }
 
 .project-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary),
+    var(--accent)
+  );
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -494,7 +542,11 @@
 }
 
 .project-btn-play {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
   color: white;
 }
 
@@ -554,7 +606,7 @@
 }
 
 .skill-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -562,10 +614,18 @@
   height: 4px;
 }
 
-.skill-card:nth-child(1)::before { background: linear-gradient(90deg, var(--primary), var(--secondary)); }
-.skill-card:nth-child(2)::before { background: linear-gradient(90deg, var(--accent), var(--primary)); }
-.skill-card:nth-child(3)::before { background: linear-gradient(90deg, var(--secondary), var(--accent)); }
-.skill-card:nth-child(4)::before { background: linear-gradient(90deg, var(--dark), var(--gray)); }
+.skill-card:nth-child(1)::before {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+.skill-card:nth-child(2)::before {
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+.skill-card:nth-child(3)::before {
+  background: linear-gradient(90deg, var(--secondary), var(--accent));
+}
+.skill-card:nth-child(4)::before {
+  background: linear-gradient(90deg, var(--dark), var(--gray));
+}
 
 .skill-card:hover {
   transform: translateY(-5px);
@@ -629,8 +689,7 @@
   border-radius: 10px;
   color: white;
   text-decoration: none;
-  font-size:rem;
-  transition 1.1: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer .social-links a:hover {
