@@ -1,0 +1,465 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1120" width="800" height="1120">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#060a1a"/>
+      <stop offset="30%" stop-color="#0a1535"/>
+      <stop offset="60%" stop-color="#0f2050"/>
+      <stop offset="100%" stop-color="#1a3068"/>
+    </linearGradient>
+    <!-- 地面渐变 -->
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a2a"/>
+      <stop offset="100%" stop-color="#0d1f16"/>
+    </linearGradient>
+    <!-- 金色渐变 -->
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C5961A"/>
+      <stop offset="30%" stop-color="#FFD700"/>
+      <stop offset="50%" stop-color="#FFEA70"/>
+      <stop offset="70%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#C5961A"/>
+    </linearGradient>
+    <!-- 世家金渐变 (更厚重) -->
+    <linearGradient id="dynastyGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFEA70"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    <!-- 标题发光 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowBig">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowSoft">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- 星星闪烁 -->
+    <radialGradient id="starGlow">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 月光渐变 -->
+    <radialGradient id="moonGlow">
+      <stop offset="0%" stop-color="#FFEA70" stop-opacity="0.2"/>
+      <stop offset="60%" stop-color="#FFD700" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ===== 背景 ===== -->
+  <rect width="800" height="1120" fill="url(#skyGrad)"/>
+
+  <!-- 月光光晕 -->
+  <circle cx="660" cy="110" r="120" fill="url(#moonGlow)"/>
+
+  <!-- 星星 -->
+  <circle cx="120" cy="50" r="1.5" fill="#fff" opacity="0.8"/>
+  <circle cx="280" cy="30" r="1" fill="#fff" opacity="0.6"/>
+  <circle cx="450" cy="70" r="2" fill="#fff" opacity="0.7"/>
+  <circle cx="580" cy="40" r="1.2" fill="#fff" opacity="0.5"/>
+  <circle cx="720" cy="80" r="1.8" fill="#fff" opacity="0.9"/>
+  <circle cx="50" cy="120" r="1" fill="#fff" opacity="0.4"/>
+  <circle cx="350" cy="110" r="1.5" fill="#fff" opacity="0.6"/>
+  <circle cx="680" cy="160" r="1" fill="#fff" opacity="0.7"/>
+  <circle cx="160" cy="160" r="2" fill="#fff" opacity="0.5"/>
+  <circle cx="540" cy="130" r="1.3" fill="#fff" opacity="0.8"/>
+  <circle cx="760" cy="190" r="1" fill="#fff" opacity="0.3"/>
+  <circle cx="90" cy="200" r="1.5" fill="#fff" opacity="0.6"/>
+  <circle cx="420" cy="30" r="0.8" fill="#fff" opacity="0.5"/>
+  <circle cx="200" cy="85" r="1.2" fill="#fff" opacity="0.4"/>
+
+  <!-- 闪烁大星 -->
+  <circle cx="180" cy="90" r="8" fill="url(#starGlow)"/>
+  <circle cx="630" cy="60" r="6" fill="url(#starGlow)"/>
+  <circle cx="400" cy="45" r="5" fill="url(#starGlow)"/>
+  <circle cx="500" cy="100" r="4" fill="url(#starGlow)"/>
+
+  <!-- 月亮 -->
+  <circle cx="660" cy="110" r="40" fill="#FFEA70" opacity="0.12"/>
+  <circle cx="660" cy="110" r="28" fill="#FFD700" opacity="0.08"/>
+  <circle cx="660" cy="110" r="18" fill="#FFEA70" opacity="0.06"/>
+
+  <!-- ===== 金币粒子 (漂浮感) ===== -->
+  <circle cx="80" cy="280" r="4" fill="#FFD700" opacity="0.25"/>
+  <circle cx="720" cy="260" r="3.5" fill="#FFD700" opacity="0.2"/>
+  <circle cx="300" cy="230" r="3" fill="#FFD700" opacity="0.18"/>
+  <circle cx="560" cy="210" r="2.5" fill="#FFD700" opacity="0.25"/>
+  <circle cx="130" cy="350" r="3" fill="#FFD700" opacity="0.12"/>
+  <circle cx="670" cy="320" r="4" fill="#FFD700" opacity="0.15"/>
+  <circle cx="400" cy="190" r="2" fill="#FFD700" opacity="0.2"/>
+  <circle cx="240" cy="310" r="2.5" fill="#FFD700" opacity="0.1"/>
+
+  <!-- ===== 顶部装饰线 ===== -->
+  <line x1="250" y1="200" x2="550" y2="200" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- ===== 主标题：商道世家 ===== -->
+  <text x="400" y="270" text-anchor="middle" font-family="'SimSun', 'Microsoft YaHei', 'PingFang SC', serif" font-size="82" font-weight="900" fill="url(#dynastyGold)" filter="url(#glowBig)" letter-spacing="12">
+    商道世家
+  </text>
+
+  <!-- 英文副标题 -->
+  <text x="400" y="305" text-anchor="middle" font-family="'Georgia', 'Times New Roman', serif" font-size="16" fill="#FFD700" opacity="0.5" letter-spacing="8" font-weight="400" font-style="italic">
+    DYNASTY OF COMMERCE
+  </text>
+
+  <!-- 装饰分割线 -->
+  <line x1="180" y1="325" x2="340" y2="325" stroke="url(#goldGrad)" stroke-width="1" opacity="0.35"/>
+  <text x="400" y="332" text-anchor="middle" font-size="16" fill="#FFD700" opacity="0.5">◆</text>
+  <line x1="460" y1="325" x2="620" y2="325" stroke="url(#goldGrad)" stroke-width="1" opacity="0.35"/>
+
+  <!-- 核心亮点 Slogan -->
+  <text x="400" y="360" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" fill="#E0E8FF" opacity="0.85" letter-spacing="3">
+    以商立家，缔造属于你的商业世家传奇
+  </text>
+
+  <!-- ===== 世家崛起进化线 ===== -->
+  <!-- 背景装饰线 -->
+  <line x1="100" y1="420" x2="700" y2="420" stroke="#FFD700" stroke-width="1.5" opacity="0.2" stroke-dasharray="8,5"/>
+
+  <!-- 阶段1: 创业小摊 -->
+  <rect x="65" y="396" width="58" height="48" rx="8" fill="#0f1a30" stroke="#FFD700" stroke-width="1" opacity="0.9"/>
+  <text x="94" y="416" text-anchor="middle" font-size="18">🏪</text>
+  <text x="94" y="435" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="8" fill="#FFD700" opacity="0.7">起步</text>
+  <text x="140" y="424" text-anchor="middle" font-size="12" fill="#FFD700" opacity="0.4">›</text>
+
+  <!-- 阶段2: 街边商铺 -->
+  <rect x="160" y="396" width="58" height="48" rx="8" fill="#0f1a30" stroke="#FFD700" stroke-width="1" opacity="0.9"/>
+  <text x="189" y="416" text-anchor="middle" font-size="18">🏬</text>
+  <text x="189" y="435" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="8" fill="#FFD700" opacity="0.7">商铺</text>
+  <text x="235" y="424" text-anchor="middle" font-size="12" fill="#FFD700" opacity="0.4">›</text>
+
+  <!-- 阶段3: 商业街区 -->
+  <rect x="255" y="396" width="58" height="48" rx="8" fill="#0f1a30" stroke="#FFD700" stroke-width="1" opacity="0.9"/>
+  <text x="284" y="416" text-anchor="middle" font-size="18">🏙️</text>
+  <text x="284" y="435" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="8" fill="#FFD700" opacity="0.7">街区</text>
+  <text x="330" y="424" text-anchor="middle" font-size="12" fill="#FFD700" opacity="0.4">›</text>
+
+  <!-- 阶段4: 商业中心 -->
+  <rect x="350" y="396" width="58" height="48" rx="8" fill="#0f1a30" stroke="#FFD700" stroke-width="1" opacity="0.9"/>
+  <text x="379" y="416" text-anchor="middle" font-size="18">🏢</text>
+  <text x="379" y="435" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="8" fill="#FFD700" opacity="0.7">中心</text>
+  <text x="425" y="424" text-anchor="middle" font-size="12" fill="#FFD700" opacity="0.4">›</text>
+
+  <!-- 阶段5: 商业帝国 -->
+  <rect x="445" y="396" width="58" height="48" rx="8" fill="#0f1a30" stroke="#FFD700" stroke-width="1" opacity="0.9"/>
+  <text x="474" y="416" text-anchor="middle" font-size="18">🌃</text>
+  <text x="474" y="435" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="8" fill="#FFD700" opacity="0.7">帝国</text>
+  <text x="520" y="424" text-anchor="middle" font-size="12" fill="#FFD700" opacity="0.4">›</text>
+
+  <!-- 阶段6: 至尊领地 -->
+  <rect x="540" y="396" width="58" height="48" rx="8" fill="#0f1a30" stroke="#FFD700" stroke-width="1" opacity="0.9"/>
+  <text x="569" y="416" text-anchor="middle" font-size="18">🏰</text>
+  <text x="569" y="435" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="8" fill="#FFD700" opacity="0.7">至尊</text>
+  <text x="615" y="424" text-anchor="middle" font-size="12" fill="#FFD700" opacity="0.4">›</text>
+
+  <!-- 阶段7: 传奇王国 (高亮突出) -->
+  <rect x="633" y="389" width="68" height="58" rx="10" fill="#1a1030" stroke="#FFD700" stroke-width="2.5"/>
+  <text x="667" y="414" text-anchor="middle" font-size="22">👑</text>
+  <text x="667" y="437" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="9" fill="#FFD700" font-weight="bold">传奇王国</text>
+
+  <!-- ===== 远景建筑天际线 ===== -->
+  <rect x="30" y="520" width="35" height="110" rx="2" fill="#0a1530" opacity="0.5"/>
+  <rect x="75" y="490" width="30" height="140" rx="2" fill="#0a1530" opacity="0.4"/>
+  <rect x="110" y="510" width="25" height="120" rx="2" fill="#0a1530" opacity="0.35"/>
+  <rect x="690" y="510" width="35" height="120" rx="2" fill="#0a1530" opacity="0.45"/>
+  <rect x="735" y="530" width="30" height="100" rx="2" fill="#0a1530" opacity="0.35"/>
+  <rect x="770" y="545" width="25" height="85" rx="2" fill="#0a1530" opacity="0.3"/>
+
+  <!-- ===== 酒吧建筑 (左) ===== -->
+  <g transform="translate(120, 470)">
+    <!-- 建筑主体 -->
+    <rect x="0" y="30" width="120" height="100" rx="4" fill="#2d1b4e"/>
+    <!-- 屋顶 -->
+    <rect x="-5" y="22" width="130" height="14" rx="3" fill="#3d2b6e"/>
+    <!-- 侧面3D -->
+    <polygon points="120,30 140,20 140,120 120,130" fill="#231540" opacity="0.7"/>
+    <!-- 招牌 -->
+    <rect x="18" y="34" width="84" height="22" rx="4" fill="#4a1a8a" stroke="#9b59b6" stroke-width="1"/>
+    <text x="60" y="50" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="12" fill="#e8b4f8" font-weight="bold">🍺 酒吧</text>
+    <!-- 窗户 -->
+    <rect x="15" y="68" width="22" height="18" rx="2" fill="#7c3aed" opacity="0.6"/>
+    <rect x="48" y="68" width="22" height="18" rx="2" fill="#a855f7" opacity="0.5"/>
+    <rect x="82" y="68" width="22" height="18" rx="2" fill="#7c3aed" opacity="0.6"/>
+    <!-- 窗户灯光 -->
+    <rect x="17" y="70" width="18" height="14" rx="1" fill="#c084fc" opacity="0.15"/>
+    <rect x="50" y="70" width="18" height="14" rx="1" fill="#c084fc" opacity="0.12"/>
+    <rect x="84" y="70" width="18" height="14" rx="1" fill="#c084fc" opacity="0.15"/>
+    <!-- 门 -->
+    <rect x="42" y="100" width="35" height="30" rx="3" fill="#1a0a2e"/>
+    <circle cx="72" cy="116" r="2" fill="#FFD700" opacity="0.8"/>
+    <!-- 霓虹灯条 -->
+    <rect x="5" y="94" width="110" height="2" rx="1" fill="#a855f7" opacity="0.3"/>
+    <!-- 等级标签 -->
+    <rect x="82" y="100" width="32" height="15" rx="7" fill="#FFD700"/>
+    <text x="98" y="111" text-anchor="middle" font-size="8" fill="#1a0a2e" font-weight="bold">Lv.3</text>
+  </g>
+
+  <!-- ===== 酒店建筑 (中, 最高) ===== -->
+  <g transform="translate(300, 410)">
+    <!-- 建筑主体 -->
+    <rect x="0" y="20" width="155" height="170" rx="4" fill="#1a3a5c"/>
+    <!-- 屋顶 -->
+    <rect x="-5" y="10" width="165" height="16" rx="3" fill="#2a5a8c"/>
+    <!-- 屋顶塔楼 -->
+    <rect x="55" y="-5" width="45" height="20" rx="3" fill="#3a7abd"/>
+    <rect x="70" y="-12" width="15" height="10" rx="2" fill="#4a8acd"/>
+    <text x="77" y="-4" text-anchor="middle" font-size="6" fill="#FFD700">★</text>
+    <!-- 五星标识 -->
+    <text x="77" y="6" text-anchor="middle" font-size="7" fill="#FFD700" opacity="0.8">★★★★★</text>
+    <!-- 侧面3D -->
+    <polygon points="155,20 180,5 180,180 155,190" fill="#102a44" opacity="0.7"/>
+    <!-- 招牌 -->
+    <rect x="22" y="28" width="110" height="28" rx="5" fill="#0e4d7a" stroke="#3498db" stroke-width="1.5"/>
+    <text x="77" y="47" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="14" fill="#87CEEB" font-weight="bold">🏨 酒店</text>
+    <!-- 窗户行1 -->
+    <rect x="12" y="68" width="20" height="16" rx="2" fill="#3498db" opacity="0.4"/>
+    <rect x="42" y="68" width="20" height="16" rx="2" fill="#3498db" opacity="0.5"/>
+    <rect x="72" y="68" width="20" height="16" rx="2" fill="#3498db" opacity="0.4"/>
+    <rect x="102" y="68" width="20" height="16" rx="2" fill="#3498db" opacity="0.5"/>
+    <rect x="132" y="68" width="15" height="16" rx="2" fill="#3498db" opacity="0.35"/>
+    <!-- 窗户行2 -->
+    <rect x="12" y="92" width="20" height="16" rx="2" fill="#3498db" opacity="0.5"/>
+    <rect x="42" y="92" width="20" height="16" rx="2" fill="#3498db" opacity="0.4"/>
+    <rect x="72" y="92" width="20" height="16" rx="2" fill="#3498db" opacity="0.5"/>
+    <rect x="102" y="92" width="20" height="16" rx="2" fill="#3498db" opacity="0.4"/>
+    <rect x="132" y="92" width="15" height="16" rx="2" fill="#3498db" opacity="0.3"/>
+    <!-- 窗户行3 -->
+    <rect x="12" y="116" width="20" height="16" rx="2" fill="#3498db" opacity="0.4"/>
+    <rect x="42" y="116" width="20" height="16" rx="2" fill="#3498db" opacity="0.3"/>
+    <rect x="72" y="116" width="20" height="16" rx="2" fill="#3498db" opacity="0.4"/>
+    <rect x="102" y="116" width="20" height="16" rx="2" fill="#3498db" opacity="0.3"/>
+    <rect x="132" y="116" width="15" height="16" rx="2" fill="#3498db" opacity="0.25"/>
+    <!-- 窗户行4 -->
+    <rect x="12" y="140" width="20" height="16" rx="2" fill="#3498db" opacity="0.3"/>
+    <rect x="42" y="140" width="20" height="16" rx="2" fill="#3498db" opacity="0.35"/>
+    <rect x="72" y="140" width="20" height="16" rx="2" fill="#3498db" opacity="0.3"/>
+    <rect x="102" y="140" width="20" height="16" rx="2" fill="#3498db" opacity="0.35"/>
+    <!-- 大门 -->
+    <rect x="48" y="160" width="60" height="30" rx="4" fill="#0a2a44"/>
+    <rect x="76" y="160" width="4" height="30" fill="#1a3a5c"/>
+    <circle cx="73" cy="177" r="2" fill="#FFD700"/>
+    <circle cx="83" cy="177" r="2" fill="#FFD700"/>
+    <!-- 门廊装饰 -->
+    <rect x="43" y="155" width="70" height="5" rx="2" fill="#2a5a8c"/>
+    <!-- 等级标签 -->
+    <rect x="112" y="162" width="35" height="16" rx="8" fill="#FFD700"/>
+    <text x="129" y="173" text-anchor="middle" font-size="9" fill="#1a0a2e" font-weight="bold">Lv.5</text>
+  </g>
+
+  <!-- ===== 赌场建筑 (右) ===== -->
+  <g transform="translate(530, 455)">
+    <!-- 建筑主体 -->
+    <rect x="0" y="25" width="135" height="115" rx="4" fill="#4a1a1a"/>
+    <!-- 屋顶 -->
+    <rect x="-5" y="16" width="145" height="14" rx="3" fill="#6a2a2a"/>
+    <!-- 屋顶装饰 -->
+    <rect x="45" y="8" width="45" height="12" rx="3" fill="#7a3030"/>
+    <text x="67" y="17" text-anchor="middle" font-size="10" fill="#FFD700" opacity="0.6">♦</text>
+    <!-- 侧面3D -->
+    <polygon points="135,25 155,15 155,130 135,140" fill="#3a0a0a" opacity="0.7"/>
+    <!-- 招牌 -->
+    <rect x="12" y="32" width="110" height="24" rx="5" fill="#8b0000" stroke="#e74c3c" stroke-width="1.5"/>
+    <text x="67" y="49" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="13" fill="#FFD700" font-weight="bold">🎰 赌场</text>
+    <!-- 霓虹窗 -->
+    <rect x="10" y="66" width="25" height="18" rx="2" fill="#e74c3c" opacity="0.4"/>
+    <rect x="45" y="66" width="25" height="18" rx="2" fill="#FFD700" opacity="0.3"/>
+    <rect x="80" y="66" width="25" height="18" rx="2" fill="#e74c3c" opacity="0.4"/>
+    <!-- 霓虹灯条 -->
+    <rect x="5" y="90" width="125" height="2" rx="1" fill="#e74c3c" opacity="0.25"/>
+    <!-- 扑克装饰 -->
+    <text x="18" y="105" font-size="13" opacity="0.25" fill="#fff">♠</text>
+    <text x="105" y="105" font-size="13" opacity="0.25" fill="#e74c3c">♥</text>
+    <!-- 门 -->
+    <rect x="40" y="100" width="55" height="40" rx="4" fill="#2a0808"/>
+    <circle cx="88" cy="122" r="2.5" fill="#FFD700" opacity="0.9"/>
+    <!-- 等级标签 -->
+    <rect x="95" y="108" width="32" height="15" rx="7" fill="#FFD700"/>
+    <text x="111" y="119" text-anchor="middle" font-size="8" fill="#1a0a2e" font-weight="bold">Lv.2</text>
+  </g>
+
+  <!-- ===== 地面 ===== -->
+  <rect x="0" y="630" width="800" height="25" fill="url(#groundGrad)"/>
+  <!-- 路面 -->
+  <rect x="0" y="640" width="800" height="8" fill="#1a1a1a" opacity="0.6"/>
+  <rect x="40" y="643" width="35" height="2" rx="1" fill="#FFD700" opacity="0.1"/>
+  <rect x="140" y="643" width="35" height="2" rx="1" fill="#FFD700" opacity="0.1"/>
+  <rect x="240" y="643" width="35" height="2" rx="1" fill="#FFD700" opacity="0.1"/>
+  <rect x="340" y="643" width="35" height="2" rx="1" fill="#FFD700" opacity="0.1"/>
+  <rect x="440" y="643" width="35" height="2" rx="1" fill="#FFD700" opacity="0.1"/>
+  <rect x="540" y="643" width="35" height="2" rx="1" fill="#FFD700" opacity="0.1"/>
+  <rect x="640" y="643" width="35" height="2" rx="1" fill="#FFD700" opacity="0.1"/>
+  <rect x="740" y="643" width="35" height="2" rx="1" fill="#FFD700" opacity="0.1"/>
+
+  <!-- ===== 收入动画特效 ===== -->
+  <text x="195" y="465" text-anchor="middle" font-size="14" fill="#4ade80" font-weight="bold" opacity="0.7" filter="url(#glow)">+$80</text>
+  <text x="395" y="405" text-anchor="middle" font-size="17" fill="#4ade80" font-weight="bold" opacity="0.8" filter="url(#glow)">+$250</text>
+  <text x="615" y="450" text-anchor="middle" font-size="13" fill="#4ade80" font-weight="bold" opacity="0.6" filter="url(#glow)">+$120</text>
+
+  <!-- ===== 卡通NPC角色 ===== -->
+  <!-- NPC 1: 调酒师 (酒吧前) -->
+  <g transform="translate(170, 598)">
+    <rect x="-7" y="8" width="14" height="16" rx="3" fill="#9b59b6"/>
+    <circle cx="0" cy="3" r="8" fill="#FFDAB9"/>
+    <circle cx="-3" cy="1" r="1.5" fill="#333"/>
+    <circle cx="3" cy="1" r="1.5" fill="#333"/>
+    <path d="M-2,5 Q0,7 2,5" stroke="#e88" stroke-width="0.8" fill="none"/>
+    <!-- 蝴蝶结 -->
+    <polygon points="-4,8 0,10 4,8 0,12" fill="#e74c3c" opacity="0.8"/>
+    <rect x="-5" y="24" width="4" height="8" rx="2" fill="#333"/>
+    <rect x="1" y="24" width="4" height="8" rx="2" fill="#333"/>
+  </g>
+
+  <!-- NPC 2: 经理 (酒店前) -->
+  <g transform="translate(385, 598)">
+    <rect x="-8" y="7" width="16" height="18" rx="3" fill="#1a2744"/>
+    <circle cx="0" cy="2" r="9" fill="#F5DEB3"/>
+    <circle cx="-3" cy="0" r="1.5" fill="#333"/>
+    <circle cx="3" cy="0" r="1.5" fill="#333"/>
+    <path d="M-2,4 Q0,6 2,4" stroke="#e88" stroke-width="0.8" fill="none"/>
+    <!-- 领带 -->
+    <polygon points="0,7 -2,15 0,18 2,15" fill="#FFD700"/>
+    <rect x="-5" y="25" width="4" height="8" rx="2" fill="#0f1a2e"/>
+    <rect x="1" y="25" width="4" height="8" rx="2" fill="#0f1a2e"/>
+  </g>
+
+  <!-- NPC 3: 厨师 (酒店左) -->
+  <g transform="translate(338, 602)">
+    <rect x="-6" y="8" width="12" height="14" rx="3" fill="#ecf0f1"/>
+    <circle cx="0" cy="3" r="7" fill="#FFDAB9"/>
+    <!-- 厨师帽 -->
+    <rect x="-6" y="-7" width="12" height="6" rx="2" fill="#fff"/>
+    <rect x="-4" y="-10" width="8" height="5" rx="3" fill="#fff"/>
+    <circle cx="-2.5" cy="1" r="1.3" fill="#333"/>
+    <circle cx="2.5" cy="1" r="1.3" fill="#333"/>
+    <path d="M-1.5,5 Q0,6.5 1.5,5" stroke="#e88" stroke-width="0.8" fill="none"/>
+    <rect x="-4" y="22" width="3.5" height="7" rx="2" fill="#333"/>
+    <rect x="0.5" y="22" width="3.5" height="7" rx="2" fill="#333"/>
+  </g>
+
+  <!-- NPC 4: 客人 (赌场前) -->
+  <g transform="translate(598, 603)">
+    <rect x="-6" y="8" width="12" height="14" rx="3" fill="#e67e22"/>
+    <circle cx="0" cy="3" r="7" fill="#FFDAB9"/>
+    <circle cx="-2.5" cy="1" r="1.3" fill="#333"/>
+    <circle cx="2.5" cy="1" r="1.3" fill="#333"/>
+    <path d="M-2,5 Q0,7 2,5" stroke="#e88" stroke-width="0.8" fill="none"/>
+    <!-- 墨镜 -->
+    <rect x="-5" y="-1" width="4" height="3" rx="1" fill="#333" opacity="0.6"/>
+    <rect x="1" y="-1" width="4" height="3" rx="1" fill="#333" opacity="0.6"/>
+    <rect x="-4" y="22" width="3.5" height="7" rx="2" fill="#8B4513"/>
+    <rect x="0.5" y="22" width="3.5" height="7" rx="2" fill="#8B4513"/>
+  </g>
+
+  <!-- ===== 底部信息区 ===== -->
+  <rect x="0" y="660" width="800" height="460" fill="#050a18"/>
+
+  <!-- 分割装饰线 -->
+  <line x1="100" y1="680" x2="700" y2="680" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- ===== 特色功能区标题 ===== -->
+  <text x="400" y="715" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="20" fill="url(#goldGrad)" font-weight="bold" filter="url(#glowSoft)" letter-spacing="6">
+    ✦ 世 家 特 色 ✦
+  </text>
+
+  <!-- 特色1: 商业设施 -->
+  <g transform="translate(80, 740)">
+    <rect x="0" y="0" width="195" height="72" rx="12" fill="#0a1225" stroke="#FFD700" stroke-width="0.6" opacity="0.9"/>
+    <text x="22" y="30" font-size="22">🏗️</text>
+    <text x="52" y="28" font-family="'Microsoft YaHei', sans-serif" font-size="13" fill="#FFD700" font-weight="bold">15+ 商业设施</text>
+    <text x="52" y="46" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">从酒吧到度假村</text>
+    <text x="52" y="62" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">3D立体卡通建筑</text>
+  </g>
+
+  <!-- 特色2: 员工团队 -->
+  <g transform="translate(300, 740)">
+    <rect x="0" y="0" width="195" height="72" rx="12" fill="#0a1225" stroke="#FFD700" stroke-width="0.6" opacity="0.9"/>
+    <text x="22" y="30" font-size="22">👥</text>
+    <text x="52" y="28" font-family="'Microsoft YaHei', sans-serif" font-size="13" fill="#FFD700" font-weight="bold">10+ 员工职业</text>
+    <text x="52" y="46" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">招募分配管理一体</text>
+    <text x="52" y="62" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">卡通Q版角色形象</text>
+  </g>
+
+  <!-- 特色3: AI秘书 -->
+  <g transform="translate(520, 740)">
+    <rect x="0" y="0" width="195" height="72" rx="12" fill="#0a1225" stroke="#FFD700" stroke-width="0.6" opacity="0.9"/>
+    <text x="22" y="30" font-size="22">🤖</text>
+    <text x="52" y="28" font-family="'Microsoft YaHei', sans-serif" font-size="13" fill="#FFD700" font-weight="bold">AI 智能秘书</text>
+    <text x="52" y="46" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">Gemini AI 驱动</text>
+    <text x="52" y="62" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">一键经营建议</text>
+  </g>
+
+  <!-- 特色4: 版图进化 -->
+  <g transform="translate(80, 832)">
+    <rect x="0" y="0" width="195" height="72" rx="12" fill="#0a1225" stroke="#FFD700" stroke-width="0.6" opacity="0.9"/>
+    <text x="22" y="30" font-size="22">🏕️</text>
+    <text x="52" y="28" font-family="'Microsoft YaHei', sans-serif" font-size="13" fill="#FFD700" font-weight="bold">9级版图进化</text>
+    <text x="52" y="46" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">起步→传奇王国</text>
+    <text x="52" y="62" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">世家版图不断扩张</text>
+  </g>
+
+  <!-- 特色5: 世家等级 -->
+  <g transform="translate(300, 832)">
+    <rect x="0" y="0" width="195" height="72" rx="12" fill="#0a1225" stroke="#FFD700" stroke-width="0.6" opacity="0.9"/>
+    <text x="22" y="30" font-size="22">⭐</text>
+    <text x="52" y="28" font-family="'Microsoft YaHei', sans-serif" font-size="13" fill="#FFD700" font-weight="bold">8级世家等级</text>
+    <text x="52" y="46" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">60+ 成就里程碑</text>
+    <text x="52" y="62" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">丰厚升级奖励</text>
+  </g>
+
+  <!-- 特色6: 每日任务 -->
+  <g transform="translate(520, 832)">
+    <rect x="0" y="0" width="195" height="72" rx="12" fill="#0a1225" stroke="#FFD700" stroke-width="0.6" opacity="0.9"/>
+    <text x="22" y="30" font-size="22">📝</text>
+    <text x="52" y="28" font-family="'Microsoft YaHei', sans-serif" font-size="13" fill="#FFD700" font-weight="bold">每日任务签到</text>
+    <text x="52" y="46" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">6类任务循环</text>
+    <text x="52" y="62" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#7088aa">每天登录有惊喜</text>
+  </g>
+
+  <!-- ===== 玩法说明 ===== -->
+  <rect x="80" y="935" width="640" height="48" rx="24" fill="none" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.5"/>
+  <text x="400" y="964" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="13.5" fill="#C8D8F0" opacity="0.85" letter-spacing="1.5">
+    卡通风模拟经营策略游戏 · 建设施 · 招员工 · 拓版图 · 开创商道世家
+  </text>
+
+  <!-- ===== 类型标签 ===== -->
+  <g transform="translate(150, 1005)">
+    <rect x="0" y="0" width="105" height="28" rx="14" fill="#FFD700" opacity="0.12" stroke="#FFD700" stroke-width="0.6"/>
+    <text x="52" y="18" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="11" fill="#FFD700" font-weight="600">模拟经营</text>
+  </g>
+  <g transform="translate(275, 1005)">
+    <rect x="0" y="0" width="90" height="28" rx="14" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="0.6"/>
+    <text x="45" y="18" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="11" fill="#3498db" font-weight="600">策略</text>
+  </g>
+  <g transform="translate(385, 1005)">
+    <rect x="0" y="0" width="90" height="28" rx="14" fill="#4ade80" opacity="0.12" stroke="#4ade80" stroke-width="0.6"/>
+    <text x="45" y="18" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="11" fill="#4ade80" font-weight="600">休闲</text>
+  </g>
+  <g transform="translate(495, 1005)">
+    <rect x="0" y="0" width="105" height="28" rx="14" fill="#a855f7" opacity="0.12" stroke="#a855f7" stroke-width="0.6"/>
+    <text x="52" y="18" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="11" fill="#a855f7" font-weight="600">AI 驱动</text>
+  </g>
+
+  <!-- ===== 底部品牌信息 ===== -->
+  <line x1="250" y1="1060" x2="550" y2="1060" stroke="#FFD700" stroke-width="0.3" opacity="0.2"/>
+  <text x="400" y="1080" text-anchor="middle" font-family="'Georgia', 'Segoe UI', serif" font-size="11" fill="#445577" letter-spacing="3" font-style="italic">
+    WEB BROWSER · FREE TO PLAY · REACT + VITE
+  </text>
+  <text x="400" y="1102" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="10" fill="#334466" letter-spacing="1.5">
+    © 2026 商道世家 · Dynasty of Commerce
+  </text>
+</svg>

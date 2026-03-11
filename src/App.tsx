@@ -25,7 +25,6 @@ const projects: Project[] = [
     category: "game",
     url: "https://echoes-of-ecology.vercel.app/",
     githubUrl: "https://github.com/RosunOY/echoes-of-ecology",
-    cover: "/portfolio/game_cover.png",
   },
   {
     name: "人类曙光 (Dawn of Humanity)",
@@ -36,7 +35,7 @@ const projects: Project[] = [
     category: "game",
     url: "https://dawn-of-humanity-game.vercel.app/",
     githubUrl: "https://github.com/RosunOY/Dawn_of_humanity_game",
-    cover: "/portfolio/game_cover.png",
+    cover: "/portfolio/人类曙光.png",
   },
   {
     name: "拯救人类 (Save Human)",
@@ -47,7 +46,7 @@ const projects: Project[] = [
     category: "game",
     url: "https://save-human.vercel.app/",
     githubUrl: "https://github.com/RosunOY/Save_human",
-    cover: "/portfolio/game_cover.png",
+    cover: "/portfolio/拯救人类.png",
   },
   {
     name: "商道世家",
@@ -58,7 +57,7 @@ const projects: Project[] = [
     category: "game",
     url: "https://manage-game-lime.vercel.app/",
     githubUrl: "https://github.com/RosunOY/manage_game",
-    cover: "/portfolio/game_cover.png",
+    cover: "/portfolio/商道世家.svg",
   },
   {
     name: "真相游戏 (Truth Game)",
@@ -68,7 +67,7 @@ const projects: Project[] = [
     category: "game",
     url: "https://github.com/RosunOY/Truth_game",
     githubUrl: "https://github.com/RosunOY/Truth_game",
-    cover: "/portfolio/game_cover.png",
+    cover: "/portfolio/谎言校园.png",
   },
   {
     name: "智慧农业病虫害识别系统",
