@@ -101,13 +101,7 @@ const skills = [
     isDesign: true,
     qrcode: "/portfolio/wechat-qrcode.jpg",
     wechatName: "为有源头游戏来",
-  },
-  {
-    category: "公众号",
-    items: ["为有源头游戏来"],
-    isWechat: true,
-    qrcode: "/portfolio/wechat-qrcode.jpg",
-  },
+  }
 ];
 
 function App() {
@@ -170,7 +164,7 @@ function App() {
               <h1>
                 欧阳<span className="highlight">志胜</span>
               </h1>
-              <p className="title">AI游戏开发 & 全栈工程师</p>
+              <p className="title">AI游戏开发 & 全栈工程师 & 游戏策划</p>
               <p className="subtitle">探索 AI 与游戏的无限可能</p>
               <div className="hero-contact">
                 <a href="mailto:2742760385@qq.com" className="contact-item">
@@ -346,7 +340,7 @@ function App() {
             <p className="footer-wechat-title">为有源头游戏来</p>
           </div>
         </div>
-        <p>© 2026 欧阳志胜 · AI游戏开发</p>
+        <p>© 2026 欧阳志胜 · 个人网站</p>
       </footer>
     </div>
   );
