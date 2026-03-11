@@ -20,9 +20,10 @@ export default function Home() {
         </div>
         <div className="hero-badge">
           <div className="badge-content">
-            <span className="badge-status"></span>
-            湖南农业大学 · 计算机科学与技术
-            <br />
+            <div className="badge-main">
+              <span className="badge-status"></span>
+              湖南农业大学 · 计算机科学与技术
+            </div>
             <span className="education-period">2023.09 – 2027.06 本科</span>
           </div>
         </div>
