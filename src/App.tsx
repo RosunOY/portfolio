@@ -127,6 +127,7 @@ interface Experience {
   period: string;
   description: string;
   type: string;
+  link?: string;
 }
 
 const experiences: Experience[] = [
@@ -136,6 +137,7 @@ const experiences: Experience[] = [
     period: "2023.09 - 2027.06",
     description: "本科 - 计算机科学与技术专业",
     type: "education",
+    link: "https://www.chsi.com.cn/xlcx/bg.do?vcode=AYQXUHUQG7ZYWXKW&trnd=13700210680470819701683983712773&srcid=archive",
   },
   {
     title: "校园经历",

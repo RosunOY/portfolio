@@ -4,6 +4,7 @@ interface Experience {
   period: string;
   description: string;
   type: string;
+  link?: string;
 }
 
 interface ExperienceProps {
@@ -31,6 +32,17 @@ export default function Experience({
               <h3>{exp.title}</h3>
               <p className="experience-org">{exp.organization}</p>
               <p className="experience-desc">{exp.description}</p>
+              {exp.link && (
+                <a
+                  href={exp.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="experience-link"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  学信网验证 →
+                </a>
+              )}
             </div>
           </div>
         ))}
