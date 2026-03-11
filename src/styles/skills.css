@@ -400,12 +400,15 @@
 }
 
 .skill-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
   background: linear-gradient(
     135deg,
     rgba(200, 200, 220, 0.4) 0%,
     rgba(255, 255, 255, 0.3) 100%
   );
+  box-shadow:
+    0 0 15px rgba(200, 200, 220, 0.5),
+    0 0 30px rgba(200, 200, 220, 0.3);
 }
 
 /* WeChat Content (Game Design) */
@@ -437,6 +440,14 @@
   height: 120px;
   border-radius: 8px;
   border: 1px solid rgba(200, 200, 220, 0.3);
+  transition: all 0.3s ease;
+}
+
+.wechat-qrcode:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 20px rgba(200, 200, 220, 0.5),
+    0 0 40px rgba(200, 200, 220, 0.3);
 }
 
 .wechat-name {
