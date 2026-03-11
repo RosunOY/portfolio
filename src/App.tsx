@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+import "./styles/main.css";
 import { Nav, Footer, ParticleTrail } from "./components";
 import { Home, Projects, Skills, Experience } from "./pages";
 

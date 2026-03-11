@@ -1,0 +1,8 @@
+/* Main CSS Entry - Import all style modules */
+@import "./variables.css";
+@import "./components.css";
+@import "./home.css";
+@import "./projects.css";
+@import "./skills.css";
+@import "./experience.css";
+@import "./responsive.css";
