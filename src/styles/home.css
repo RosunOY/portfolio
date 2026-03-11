@@ -214,9 +214,9 @@
 /* Hero Badge */
 .hero-badge {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   background: rgba(30, 30, 50, 0.8);
   border: 1px solid rgba(100, 150, 255, 0.3);
   border-radius: 50px;
@@ -227,7 +227,15 @@
   animation: fadeInUp 0.6s ease;
 }
 
-.hero-badge span {
+.hero-badge .badge-content {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.hero-badge .badge-status {
   width: 8px;
   height: 8px;
   background: #22c55e;
@@ -237,8 +245,7 @@
 }
 
 .hero-badge .education-period {
-  display: block;
-  margin-top: 0.25rem;
+  font-size: 0.8rem;
 }
 
 /* Title */
