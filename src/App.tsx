@@ -92,16 +92,8 @@ const skills = [
   { category: "开发工具", items: ["Git", "Maven", "Docker", "Claude Code"] },
   {
     category: "游戏策划",
-    items: [
-      "游戏系统设计",
-      "数值体系搭建",
-      "玩法原型设计",
-      "玩家体验优化"
-    ],
-    isDesign: true,
-    qrcode: "/portfolio/wechat-qrcode.jpg",
-    wechatName: "为有源头游戏来",
-  }
+    items: ["游戏系统设计", "数值体系搭建", "玩法原型设计", "玩家体验优化"],
+  },
 ];
 
 function App() {
@@ -282,45 +274,15 @@ function App() {
             <p className="skills-subtitle">持续学习，不断精进</p>
             <div className="skills-grid">
               {skills.map((skill, index) => (
-                <div
-                  key={index}
-                  className={`skill-card ${skill.isWechat || skill.isDesign ? "skill-card-wechat" : ""}`}
-                >
+                <div key={index} className="skill-card">
                   <h3>{skill.category}</h3>
-                  {skill.isWechat || skill.isDesign ? (
-                    <div className="wechat-content">
-                      {skill.isDesign && (
-                        <div className="design-items">
-                          {skill.items.map((item, i) => (
-                            <span key={i} className="skill-item">
-                              {item}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                      <div className="wechat-promo">
-                        <img
-                          src={skill.qrcode}
-                          alt="微信公众号二维码"
-                          className="wechat-qrcode"
-                        />
-                        <p className="wechat-name">
-                          {skill.wechatName || skill.items[0]}
-                        </p>
-                        <p className="wechat-hint">
-                          更多文章信息可关注微信公众号查看
-                        </p>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="skill-items">
-                      {skill.items.map((item, i) => (
-                        <span key={i} className="skill-item">
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  )}
+                  <div className="skill-items">
+                    {skill.items.map((item, i) => (
+                      <span key={i} className="skill-item">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
@@ -329,17 +291,6 @@ function App() {
       </main>
 
       <footer className="footer">
-        <div className="footer-wechat">
-          <img
-            src="/portfolio/wechat-qrcode.jpg"
-            alt="微信公众号二维码"
-            className="footer-wechat-qrcode"
-          />
-          <div className="footer-wechat-info">
-            <p className="footer-wechat-name">微信公众号</p>
-            <p className="footer-wechat-title">为有源头游戏来</p>
-          </div>
-        </div>
         <p>© 2026 欧阳志胜 · 个人网站</p>
       </footer>
     </div>
