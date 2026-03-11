@@ -20,9 +20,8 @@ export default function Home() {
         </div>
         <div className="hero-badge">
           <span></span>
-          湖南农业大学 · 计算机科学与技术
+          湖南农业大学 · 计算机科学与技术 · 2023.09 – 2027.06 本科
         </div>
-        <div className="hero-education-period">2023.09 – 2027.06 本科</div>
         <p className="title">博学之，审问之，慎思之，明辨之，笃行之</p>
         <div className="hero-contact">
           <a href="mailto:2742760385@qq.com" className="contact-item">
