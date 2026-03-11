@@ -6,7 +6,7 @@ interface Project {
   description: string;
   tech: string[];
   highlight?: string;
-  category?: "game" | "ai" | "web";
+  category?: "game" | "ai" | "design" | "web";
   url?: string;
   githubUrl?: string;
 }
@@ -77,6 +77,15 @@ const projects: Project[] = [
     category: "ai",
     githubUrl: "https://github.com/RosunOY/SmartPestos",
   },
+  {
+    name: "为有源头游戏来",
+    description: "公众号文章合集 - 游戏系统设计、玩法分析、行业思考",
+    tech: ["游戏策划", "系统设计", "玩法分析", "行业思考"],
+    highlight: "公众号文章",
+    category: "design",
+    url: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=Mzg2NzExNjY0Mw==#wechat_redirect",
+    githubUrl: "https://gitee.com/ouyangzhisheng",
+  },
 ];
 
 const skills = [
@@ -103,7 +112,7 @@ function App() {
   const [activeTab, setActiveTab] = useState<"home" | "projects" | "skills">(
     "home",
   );
-  const [filter, setFilter] = useState<"all" | "game" | "ai">("all");
+  const [filter, setFilter] = useState<"all" | "game" | "ai" | "design">("all");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -224,6 +233,12 @@ function App() {
                 onClick={() => setFilter("ai")}
               >
                 AI应用
+              </button>
+              <button
+                className={`filter-btn ${filter === "design" ? "active" : ""}`}
+                onClick={() => setFilter("design")}
+              >
+                游戏策划
               </button>
             </div>
             <div className="project-list">
