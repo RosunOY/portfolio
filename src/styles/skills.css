@@ -16,7 +16,7 @@
       rgba(10, 10, 15, 0.85) 0%,
       rgba(26, 26, 46, 0.85) 100%
     ),
-    url("/portfolio/流浪地球.png") no-repeat center center / cover,
+    url("/portfolio/流浪地球.png") no-repeat center center / 60% auto,
     radial-gradient(
       ellipse at 20% 30%,
       rgba(236, 72, 153, 0.15) 0%,
@@ -39,34 +39,139 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background:
+  background-image:
     radial-gradient(
-      1px 1px at 50px 100px,
+      1px 1px at 20px 30px,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 40px 70px,
       rgba(255, 255, 255, 0.7),
       transparent
     ),
     radial-gradient(
-      1px 1px at 150px 50px,
-      rgba(255, 255, 255, 0.5),
-      transparent
-    ),
-    radial-gradient(
-      1px 1px at 250px 150px,
-      rgba(255, 255, 255, 0.6),
-      transparent
-    ),
-    radial-gradient(
-      1px 1px at 350px 80px,
+      1px 1px at 50px 160px,
       rgba(255, 255, 255, 0.8),
       transparent
     ),
     radial-gradient(
-      1px 1px at 450px 120px,
-      rgba(255, 255, 255, 0.5),
+      1px 1px at 90px 40px,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 130px 80px,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 160px 120px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 200px 50px,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 240px 140px,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 280px 60px,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 320px 100px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 360px 180px,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 400px 40px,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 440px 130px,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 480px 70px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 520px 150px,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 560px 90px,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 600px 170px,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 640px 50px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 680px 110px,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 720px 140px,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(
+      2px 2px at 150px 200px,
+      rgba(255, 255, 255, 1),
+      transparent
+    ),
+    radial-gradient(
+      2px 2px at 350px 250px,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    ),
+    radial-gradient(
+      2px 2px at 550px 220px,
+      rgba(255, 255, 255, 1),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 250px 300px,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 450px 320px,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 650px 280px,
+      rgba(255, 255, 255, 0.8),
       transparent
     );
-  background-size: 500px 200px;
-  animation: starTwinkle 6s ease-in-out infinite;
+  background-size: 800px 400px;
+  animation: starTwinkle 4s ease-in-out infinite;
   z-index: 0;
 }
 
