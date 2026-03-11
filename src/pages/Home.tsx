@@ -30,7 +30,12 @@ export default function Home() {
         <p className="title">博学之，审问之，慎思之，明辨之，笃行之</p>
         <div className="hero-contact">
           <a href="mailto:2742760385@qq.com" className="contact-item">
-            <span className="icon">✉</span> 2742760385@qq.com
+            <img
+              src="/portfolio/邮箱图标.png"
+              alt="邮箱"
+              className="platform-icon"
+            />{" "}
+            2742760385@qq.com
           </a>
           <span className="contact-item">
             <img
