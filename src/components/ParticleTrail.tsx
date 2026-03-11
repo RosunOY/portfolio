@@ -36,7 +36,7 @@ export default function ParticleTrail() {
         this.vy = (Math.random() - 0.5) * 2;
         this.size = Math.random() * 3 + 1;
         this.life = 1;
-        const colors = ["#60a5fa", "#a78bfa", "#f472b6", "#34d399", "#fbbf24"];
+        const colors = ["#c0c0c0", "#dcdcdc", "#e8e8e8", "#ffffff", "#a9a9a9"];
         this.color = colors[Math.floor(Math.random() * colors.length)];
       }
 
