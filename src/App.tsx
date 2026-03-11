@@ -94,7 +94,7 @@ const skills = [
     category: "公众号",
     items: ["为有源头游戏来"],
     isWechat: true,
-    qrcode: "/wechat-qrcode.jpg",
+    qrcode: "/portfolio/wechat-qrcode.jpg",
   },
 ];
 
@@ -293,7 +293,7 @@ function App() {
       <footer className="footer">
         <div className="footer-wechat">
           <img
-            src="/wechat-qrcode.jpg"
+            src="/portfolio/wechat-qrcode.jpg"
             alt="微信公众号二维码"
             className="footer-wechat-qrcode"
           />
