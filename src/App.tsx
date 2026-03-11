@@ -99,6 +99,9 @@ const skills = [
       "玩家体验优化",
       "商业化设计",
     ],
+    isDesign: true,
+    qrcode: "/portfolio/wechat-qrcode.jpg",
+    wechatName: "为有源头游戏来",
   },
   {
     category: "公众号",
@@ -272,18 +275,33 @@ function App() {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className={`skill-card ${skill.isWechat ? "skill-card-wechat" : ""}`}
+                  className={`skill-card ${skill.isWechat || skill.isDesign ? "skill-card-wechat" : ""}`}
                 >
                   <h3>{skill.category}</h3>
-                  {skill.isWechat ? (
+                  {skill.isWechat || skill.isDesign ? (
                     <div className="wechat-content">
-                      <img
-                        src={skill.qrcode}
-                        alt="微信公众号二维码"
-                        className="wechat-qrcode"
-                      />
-                      <p className="wechat-name">{skill.items[0]}</p>
-                      <p className="wechat-hint">扫码关注</p>
+                      {skill.isDesign && (
+                        <div className="design-items">
+                          {skill.items.map((item, i) => (
+                            <span key={i} className="skill-item">
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                      <div className="wechat-promo">
+                        <img
+                          src={skill.qrcode}
+                          alt="微信公众号二维码"
+                          className="wechat-qrcode"
+                        />
+                        <p className="wechat-name">
+                          {skill.wechatName || skill.items[0]}
+                        </p>
+                        <p className="wechat-hint">
+                          更多文章信息可关注微信公众号查看
+                        </p>
+                      </div>
                     </div>
                   ) : (
                     <div className="skill-items">

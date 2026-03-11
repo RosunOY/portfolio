@@ -762,6 +762,25 @@
   margin: 0;
 }
 
+/* Game Design Section */
+.design-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.wechat-promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(99, 102, 241, 0.3);
+  width: 100%;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero h1 {
