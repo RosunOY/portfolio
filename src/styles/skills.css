@@ -358,7 +358,7 @@
   align-items: center;
   gap: 0.5rem;
   padding-top: 1rem;
-  border-top: 1px dashed rgba(99, 102, 241, 0.3);
+  border-top: 1px dashed rgba(200, 200, 220, 0.3);
   width: 100%;
 }
 
@@ -366,18 +366,18 @@
   width: 120px;
   height: 120px;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(200, 200, 220, 0.3);
 }
 
 .wechat-name {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--dark);
+  color: #e0e0e0;
   margin: 0;
 }
 
 .wechat-hint {
   font-size: 0.8rem;
-  color: var(--gray);
+  color: #a0a0a0;
   margin: 0;
 }
