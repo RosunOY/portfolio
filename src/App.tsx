@@ -90,6 +90,12 @@ const skills = [
   },
   { category: "编程语言", items: ["Python", "Java", "C/C++", "JavaScript"] },
   { category: "开发工具", items: ["Git", "Maven", "Docker", "Claude Code"] },
+  {
+    category: "公众号",
+    items: ["为有源头游戏来"],
+    isWechat: true,
+    qrcode: "/wechat-qrcode.jpg",
+  },
 ];
 
 function App() {
@@ -253,15 +259,30 @@ function App() {
             <p className="skills-subtitle">持续学习，不断精进</p>
             <div className="skills-grid">
               {skills.map((skill, index) => (
-                <div key={index} className="skill-card">
+                <div
+                  key={index}
+                  className={`skill-card ${skill.isWechat ? "skill-card-wechat" : ""}`}
+                >
                   <h3>{skill.category}</h3>
-                  <div className="skill-items">
-                    {skill.items.map((item, i) => (
-                      <span key={i} className="skill-item">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                  {skill.isWechat ? (
+                    <div className="wechat-content">
+                      <img
+                        src={skill.qrcode}
+                        alt="微信公众号二维码"
+                        className="wechat-qrcode"
+                      />
+                      <p className="wechat-name">{skill.items[0]}</p>
+                      <p className="wechat-hint">扫码关注</p>
+                    </div>
+                  ) : (
+                    <div className="skill-items">
+                      {skill.items.map((item, i) => (
+                        <span key={i} className="skill-item">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -270,6 +291,17 @@ function App() {
       </main>
 
       <footer className="footer">
+        <div className="footer-wechat">
+          <img
+            src="/wechat-qrcode.jpg"
+            alt="微信公众号二维码"
+            className="footer-wechat-qrcode"
+          />
+          <div className="footer-wechat-info">
+            <p className="footer-wechat-name">微信公众号</p>
+            <p className="footer-wechat-title">为有源头游戏来</p>
+          </div>
+        </div>
         <p>© 2026 欧阳志胜 · AI游戏开发</p>
       </footer>
     </div>

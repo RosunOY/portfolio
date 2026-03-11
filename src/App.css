@@ -697,6 +697,71 @@
   transform: translateY(-3px);
 }
 
+/* Footer WeChat */
+.footer-wechat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-wechat-qrcode {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-wechat-info {
+  text-align: left;
+}
+
+.footer-wechat-name {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.footer-wechat-title {
+  font-size: 1rem;
+  color: white;
+  margin: 0.25rem 0 0;
+  font-weight: 600;
+}
+
+/* Skills WeChat */
+.skill-card-wechat {
+  text-align: center;
+}
+
+.wechat-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wechat-qrcode {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.wechat-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+}
+
+.wechat-hint {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin: 0;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero h1 {
