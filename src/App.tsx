@@ -180,6 +180,22 @@ function App() {
                 <span className="contact-item">
                   <span className="icon">📱</span> 19174654127
                 </span>
+                <a
+                  href="https://github.com/RosunOY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-item"
+                >
+                  <span className="icon">🐙</span> GitHub
+                </a>
+                <a
+                  href="https://gitee.com/ouyangzhisheng"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-item"
+                >
+                  <span className="icon">🐱</span> Gitee
+                </a>
               </div>
               <div className="hero-tags">
                 <span className="tag">AI游戏开发</span>
