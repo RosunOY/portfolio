@@ -278,6 +278,20 @@ function App() {
               <h1>
                 <span className="name-text">欧阳志胜</span>
               </h1>
+              <div className="hero-info-grid">
+                <div className="hero-info-item">
+                  <span className="hero-info-icon">📍</span>
+                  <span>湖南永州</span>
+                </div>
+                <div className="hero-info-item">
+                  <span className="hero-info-icon">🎂</span>
+                  <span>2004.09.17</span>
+                </div>
+                <div className="hero-info-item">
+                  <span className="hero-info-icon">🎓</span>
+                  <span>2023.09 – 2027.06</span>
+                </div>
+              </div>
               <div className="hero-badge">
                 <span></span>
                 湖南农业大学 · 计算机科学与技术

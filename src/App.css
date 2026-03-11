@@ -381,11 +381,43 @@
   font-size: 3.5rem;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
   letter-spacing: 4px;
   animation: fadeInUp 0.6s ease 0.2s both;
   font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
   text-shadow: 0 0 30px rgba(100, 150, 255, 0.5);
+}
+
+.hero-info-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+.hero-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(30, 30, 50, 0.7);
+  border: 1px solid rgba(100, 150, 255, 0.2);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  transition: all 0.3s ease;
+}
+
+.hero-info-item:hover {
+  border-color: rgba(100, 150, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.hero-info-icon {
+  font-size: 1rem;
 }
 
 .hero h1 .name-text {
