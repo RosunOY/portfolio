@@ -92,7 +92,12 @@ export default function Projects({
                       rel="noopener noreferrer"
                       className="project-btn project-btn-github"
                     >
-                      📂 详情
+                      <img
+                        src="/portfolio/GitHub图标.png"
+                        alt="GitHub"
+                        className="project-btn-icon"
+                      />{" "}
+                      详情
                     </a>
                   )}
                 </>
