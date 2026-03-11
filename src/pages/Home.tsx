@@ -31,7 +31,7 @@ export default function Home() {
         <div className="hero-contact">
           <a href="mailto:2742760385@qq.com" className="contact-item">
             <img
-              src="/portfolio/邮箱图标.png"
+              src="/portfolio/QQ邮箱.png"
               alt="邮箱"
               className="platform-icon"
             />{" "}
