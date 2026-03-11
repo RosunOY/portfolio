@@ -1,0 +1,32 @@
+interface Experience {
+  title: string;
+  organization: string;
+  period: string;
+  description: string;
+  type: string;
+}
+
+interface ExperienceProps {
+  experiences: Experience[];
+}
+
+export default function Experience({ experiences }: ExperienceProps) {
+  return (
+    <section className="experience">
+      <h2>个人经历</h2>
+      <p className="experience-subtitle">自强不息，持之以恒</p>
+      <div className="experience-timeline">
+        {experiences.map((exp, index) => (
+          <div key={index} className="experience-card">
+            <div className="experience-period">{exp.period}</div>
+            <div className="experience-content">
+              <h3>{exp.title}</h3>
+              <p className="experience-org">{exp.organization}</p>
+              <p className="experience-desc">{exp.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
