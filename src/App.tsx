@@ -96,8 +96,7 @@ const skills = [
       "游戏系统设计",
       "数值体系搭建",
       "玩法原型设计",
-      "玩家体验优化",
-      "商业化设计",
+      "玩家体验优化"
     ],
     isDesign: true,
     qrcode: "/portfolio/wechat-qrcode.jpg",
