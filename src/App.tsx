@@ -325,14 +325,14 @@ function App() {
                   <span className="hero-info-icon">🎂</span>
                   <span>2004.09.17</span>
                 </div>
-                <div className="hero-info-item">
-                  <span className="hero-info-icon">🎓</span>
-                  <span>2023.09 – 2027.06</span>
-                </div>
               </div>
               <div className="hero-badge">
                 <span></span>
                 湖南农业大学 · 计算机科学与技术
+              </div>
+              <div className="hero-education">
+                <span className="hero-education-icon">🎓</span>
+                <span>2023.09 – 2027.06 本科在读</span>
               </div>
               <p className="title">博学之，审问之，慎思之，明辨之，笃行之</p>
               <div className="hero-contact">
