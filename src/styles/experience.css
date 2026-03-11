@@ -469,6 +469,35 @@
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 
+.experience-desc:has(最近常玩) {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.15) 0%,
+    rgba(200, 200, 220, 0.1) 100%
+  );
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow:
+    0 0 20px rgba(255, 215, 0, 0.3),
+    inset 0 0 10px rgba(255, 215, 0, 0.1);
+  position: relative;
+}
+
+.experience-desc:has(最近常玩)::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  background-image: url("/portfolio/休闲娱乐.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .experience-link {
   display: inline-flex;
   align-items: center;
