@@ -246,12 +246,16 @@
 
 .highlight {
   padding: 0.35rem 0.85rem;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background: linear-gradient(135deg, #c0c0c0 0%, #ffffff 50%, #e8e8e8 100%);
   border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 600;
-  color: white;
+  color: #1a1a2e;
   white-space: nowrap;
+  box-shadow:
+    0 0 15px rgba(200, 200, 220, 0.5),
+    0 0 30px rgba(200, 200, 220, 0.3);
+  animation: starTwinkle 2s ease-in-out infinite;
 }
 
 .project-desc {
