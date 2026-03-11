@@ -35,7 +35,7 @@ const projects: Project[] = [
     category: "game",
     url: "https://dawn-of-humanity-game.vercel.app/",
     githubUrl: "https://github.com/RosunOY/Dawn_of_humanity_game",
-    cover: "/portfolio/人类曙光.png",
+    cover: "/portfolio/人类曙光.webp",
   },
   {
     name: "拯救人类 (Save Human)",
@@ -46,7 +46,7 @@ const projects: Project[] = [
     category: "game",
     url: "https://save-human.vercel.app/",
     githubUrl: "https://github.com/RosunOY/Save_human",
-    cover: "/portfolio/拯救人类.png",
+    cover: "/portfolio/拯救人类.webp",
   },
   {
     name: "商道世家",
@@ -67,7 +67,7 @@ const projects: Project[] = [
     category: "game",
     url: "https://github.com/RosunOY/Truth_game",
     githubUrl: "https://github.com/RosunOY/Truth_game",
-    cover: "/portfolio/谎言校园.png",
+    cover: "/portfolio/谎言校园.webp",
   },
   {
     name: "智慧农业病虫害识别系统",
