@@ -169,6 +169,14 @@
   animation: bgmPulse 2s infinite;
 }
 
+.bgm-icon-fallback.hidden {
+  display: none;
+}
+
+.bgm-toggle .bgm-icon-fallback {
+  font-size: 1.5rem;
+}
+
 @keyframes bgmPulse {
   0%,
   100% {

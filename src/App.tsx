@@ -334,7 +334,15 @@ function App() {
           }
         }}
       >
-        <img src="/portfolio/声音图标.png" alt="声音" />
+        <img
+          src="/portfolio/声音图标.png"
+          alt="声音"
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+            e.currentTarget.nextElementSibling?.classList.remove("hidden");
+          }}
+        />
+        <span className="bgm-icon-fallback hidden">🔊</span>
       </button>
     </div>
   );
