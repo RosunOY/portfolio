@@ -314,7 +314,7 @@ function App() {
       />
       <main className="main">{renderPage()}</main>
       <Footer />
-      <audio ref={audioRef} src="/bgm.mp4" loop playsInline />
+      <audio ref={audioRef} src="/portfolio/bgm.mp4" loop playsInline />
       <button
         className={`bgm-toggle ${isBgmPlaying ? "playing" : ""}`}
         onClick={() => {
