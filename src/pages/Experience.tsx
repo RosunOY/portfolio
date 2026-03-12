@@ -28,7 +28,7 @@ export default function Experience({
   const [verifyError, setVerifyError] = useState("");
   const [chsiLink, setChsiLink] = useState("");
 
-  const CORRECT_CODE = "123456"; // 预设查询码
+  const CORRECT_CODE = "AYQXUHUQG7ZYWXKW"; // 预设查询码
 
   const PHOTOS_PER_PAGE = 12;
 
