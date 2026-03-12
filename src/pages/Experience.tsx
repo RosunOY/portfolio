@@ -23,6 +23,12 @@ export default function Experience({
   const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
   const [currentPage, setCurrentPage] = useState<Record<number, number>>({});
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [verifyCode, setVerifyCode] = useState("");
+  const [showVerifyModal, setShowVerifyModal] = useState(false);
+  const [verifyError, setVerifyError] = useState("");
+  const [chsiLink, setChsiLink] = useState("");
+
+  const CORRECT_CODE = "123456"; // 预设查询码
 
   const PHOTOS_PER_PAGE = 12;
 
@@ -164,11 +170,16 @@ export default function Experience({
                 )}
                 {exp.link && (
                   <a
-                    href={exp.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#"
                     className="experience-link"
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setChsiLink(exp.link || "");
+                      setVerifyCode("");
+                      setVerifyError("");
+                      setShowVerifyModal(true);
+                    }}
                   >
                     学信网验证 →
                   </a>
@@ -182,6 +193,45 @@ export default function Experience({
         <div className="lightbox" onClick={() => setLightboxImage(null)}>
           <span className="lightbox-close">&times;</span>
           <img src={lightboxImage} alt="查看大图" />
+        </div>
+      )}
+      {showVerifyModal && (
+        <div className="lightbox" onClick={() => setShowVerifyModal(false)}>
+          <div className="verify-modal" onClick={(e) => e.stopPropagation()}>
+            <h3>输入查询码验证</h3>
+            <input
+              type="text"
+              value={verifyCode}
+              onChange={(e) => {
+                setVerifyCode(e.target.value);
+                setVerifyError("");
+              }}
+              placeholder="请输入查询码"
+              className="verify-input"
+            />
+            {verifyError && <p className="verify-error">{verifyError}</p>}
+            <div className="verify-buttons">
+              <button
+                className="verify-btn cancel"
+                onClick={() => setShowVerifyModal(false)}
+              >
+                取消
+              </button>
+              <button
+                className="verify-btn confirm"
+                onClick={() => {
+                  if (verifyCode === CORRECT_CODE) {
+                    window.open(chsiLink, "_blank");
+                    setShowVerifyModal(false);
+                  } else {
+                    setVerifyError("查询码错误，请重试");
+                  }
+                }}
+              >
+                确认
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </section>
