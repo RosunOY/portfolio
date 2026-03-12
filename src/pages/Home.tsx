@@ -113,10 +113,10 @@ export default function Home({ onNavigate }: HomeProps) {
             More About Me →
           </button>
         )}
-      </div>
-      <div className="scroll-indicator">
-        <div className="mouse"></div>
-        <span>向下滚动</span>
+        <div className="scroll-indicator">
+          <div className="mouse"></div>
+          <span>向下滚动</span>
+        </div>
       </div>
     </section>
   );
