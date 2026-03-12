@@ -29,7 +29,7 @@ export default function Experience({
   const [chsiLink, setChsiLink] = useState("");
 
   // Base64 encoded query code
-  const encodedCode = "QVlRWkhVUUc3WllXWEtX";
+  const encodedCode = "QVlRWFVIVVFHN1pZV1hLVw==";
 
   const PHOTOS_PER_PAGE = 12;
 
