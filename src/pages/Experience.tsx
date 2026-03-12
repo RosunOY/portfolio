@@ -221,7 +221,7 @@ export default function Experience({
               <button
                 className="verify-btn confirm"
                 onClick={() => {
-                  if (verifyCode === atob(encodedCode)) {
+                  if (btoa(verifyCode) === encodedCode) {
                     window.open(chsiLink, "_blank");
                     setShowVerifyModal(false);
                   } else {
