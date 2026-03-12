@@ -7,6 +7,8 @@ interface Experience {
   description: string;
   type: string;
   link?: string;
+  isPhotoCard?: boolean;
+  photos?: string[];
 }
 
 interface ExperienceProps {
@@ -50,6 +52,45 @@ export default function Experience({
         {experiences.map((exp, index) => {
           const isExpanded = expandedCards.has(index);
           const hasMoreContent = exp.description.split("\n").length > 2;
+
+          // 照片卡片渲染
+          if (exp.isPhotoCard && exp.photos && exp.photos.length > 0) {
+            const photos = exp.photos;
+            const isExpanded = expandedCards.has(index);
+            const displayPhotos = isExpanded ? photos : photos.slice(0, 4);
+
+            return (
+              <div
+                key={index}
+                className={`experience-card photo-card ${isExpanded ? "expanded" : ""}`}
+              >
+                <div className="experience-period">{exp.period}</div>
+                <div className="experience-content">
+                  <h3>{exp.title}</h3>
+                  <p className="experience-org">{exp.organization}</p>
+                  <div className="photo-grid">
+                    {displayPhotos.map((photo, photoIndex) => (
+                      <div key={photoIndex} className="photo-item">
+                        <img
+                          src={photo}
+                          alt={`照片 ${photoIndex + 1}`}
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <button
+                    className="expand-btn"
+                    onClick={(e) => toggleExpand(index, e)}
+                  >
+                    {isExpanded
+                      ? "收起 ▲"
+                      : `展开查看全部 ${photos.length} 张照片 ▼`}
+                  </button>
+                </div>
+              </div>
+            );
+          }
 
           return (
             <div

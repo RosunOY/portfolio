@@ -546,3 +546,75 @@
 .experience-card.expanded {
   min-height: auto;
 }
+
+/* Photo Card */
+.photo-card {
+  cursor: default;
+}
+
+.photo-card:hover {
+  transform: translateX(15px) scale(1.02);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.photo-item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(200, 200, 220, 0.3);
+  background: rgba(30, 30, 50, 0.5);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(200, 200, 220, 0.2);
+}
+
+.page-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(200, 200, 220, 0.2);
+  border: 1px solid rgba(200, 200, 220, 0.3);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: rgba(200, 200, 220, 0.3);
+  border-color: rgba(200, 200, 220, 0.5);
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}

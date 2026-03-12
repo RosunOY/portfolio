@@ -148,6 +148,8 @@ interface Experience {
   description: string;
   type: string;
   link?: string;
+  isPhotoCard?: boolean;
+  photos?: string[];
 }
 
 const experiences: Experience[] = [
@@ -174,6 +176,44 @@ const experiences: Experience[] = [
     description:
       "喜欢健身（1年+）、听音乐、看电影、看动漫（剑来、凡人修仙传、吞噬星空等国漫）、看小说、唱歌、玩游戏、vibe coding、写游戏策划案\n喜欢单依纯、张起灵\n🎮 最近常玩：逆战未来、永劫无间、瓦罗兰特、金铲铲之战、LOL、我的世界、森林之子、王者荣耀\n玩过游戏：口袋妖怪、星露谷物语、三角洲行动、云顶之弈、CF、战地风云5、黑神话悟空、洛克王国、拳皇系列、明日方舟、植物大战僵尸、美食大战老鼠、赛尔号、奥拉星、圆梦之星、红色警戒、侠盗飞车、球球大作战、火影忍者、QQ飞车、光遇、欢乐斗地主、开心消消乐、水果忍者、狼人杀、燕云十六声",
     type: "hobby",
+  },
+  {
+    title: "生活日常",
+    organization: "记录点滴",
+    period: "2023 - 至今",
+    description: "记录生活中的美好瞬间",
+    type: "photos",
+    isPhotoCard: true,
+    photos: [
+      "/portfolio/个人照片0.webp",
+      "/portfolio/个人照片1.webp",
+      "/portfolio/个人照片2.webp",
+      "/portfolio/个人照片3.webp",
+      "/portfolio/个人照片4.webp",
+      "/portfolio/个人照片5.webp",
+      "/portfolio/个人照片6.webp",
+      "/portfolio/个人照片7.webp",
+      "/portfolio/个人照片8.webp",
+      "/portfolio/个人照片9.webp",
+      "/portfolio/个人照片10.webp",
+      "/portfolio/个人照片11.webp",
+      "/portfolio/个人照片12.webp",
+      "/portfolio/个人照片13.webp",
+      "/portfolio/个人照片14.webp",
+      "/portfolio/个人照片15.webp",
+      "/portfolio/个人照片16.webp",
+      "/portfolio/个人照片17.webp",
+      "/portfolio/个人照片18.webp",
+      "/portfolio/个人照片19.webp",
+      "/portfolio/个人照片20.webp",
+      "/portfolio/个人照片21.webp",
+      "/portfolio/个人照片22.webp",
+      "/portfolio/个人照片23.webp",
+      "/portfolio/个人照片24.webp",
+      "/portfolio/个人照片25.webp",
+      "/portfolio/个人照片26.webp",
+      "/portfolio/照片.webp",
+    ],
   },
   {
     title: "游戏开发",
