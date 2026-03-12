@@ -343,10 +343,27 @@
 /* Title */
 .title {
   font-size: 1.5rem;
-  color: #a0a0a0;
+  color: #c0c0c0;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  animation: fadeInUp 0.6s ease 0.3s both;
+  animation:
+    fadeInUp 0.6s ease 0.3s both,
+    silverTextGlow 3s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.5);
+}
+
+@keyframes silverTextGlow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.5);
+    color: #c0c0c0;
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(220, 220, 240, 0.8),
+      0 0 30px rgba(220, 220, 240, 0.5);
+    color: #ffffff;
+  }
 }
 
 /* Hero Contact */
