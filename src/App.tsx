@@ -312,6 +312,7 @@ function App() {
       />
       <main className="main">{renderPage()}</main>
       <Footer />
+      <audio src="/portfolio/bgm.mp4" autoPlay loop muted playsInline />
     </div>
   );
 }
