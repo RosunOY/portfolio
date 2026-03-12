@@ -22,6 +22,7 @@ export default function Experience({
 }: ExperienceProps) {
   const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
   const [currentPage, setCurrentPage] = useState<Record<number, number>>({});
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   const PHOTOS_PER_PAGE = 12;
 
@@ -90,7 +91,11 @@ export default function Experience({
                   <p className="experience-org">{exp.organization}</p>
                   <div className="photo-grid">
                     {displayPhotos.map((photo, photoIndex) => (
-                      <div key={photoIndex} className="photo-item">
+                      <div
+                        key={photoIndex}
+                        className="photo-item"
+                        onClick={() => setLightboxImage(photo)}
+                      >
                         <img
                           src={photo}
                           alt={`照片 ${isExpanded ? (page - 1) * PHOTOS_PER_PAGE + photoIndex + 1 : photoIndex + 1}`}
@@ -173,6 +178,12 @@ export default function Experience({
           );
         })}
       </div>
+      {lightboxImage && (
+        <div className="lightbox" onClick={() => setLightboxImage(null)}>
+          <span className="lightbox-close">&times;</span>
+          <img src={lightboxImage} alt="查看大图" />
+        </div>
+      )}
     </section>
   );
 }
