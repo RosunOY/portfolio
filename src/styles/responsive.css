@@ -1,6 +1,12 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   /* Home */
+  .hero {
+    overflow-y: auto;
+    min-height: 100vh;
+    padding-top: 5rem;
+  }
+
   .hero h1 {
     font-size: 2rem;
     letter-spacing: -1px;
