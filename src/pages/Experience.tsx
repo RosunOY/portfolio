@@ -27,8 +27,7 @@ export default function Experience({
   const [showVerifyModal, setShowVerifyModal] = useState(false);
   const [verifyError, setVerifyError] = useState("");
   const [chsiLink, setChsiLink] = useState("");
-
-  const CORRECT_CODE = "AYQXUHUQG7ZYWXKW"; // 预设查询码
+  const [isVerifying, setIsVerifying] = useState(false);
 
   const PHOTOS_PER_PAGE = 12;
 
@@ -219,16 +218,30 @@ export default function Experience({
               </button>
               <button
                 className="verify-btn confirm"
-                onClick={() => {
-                  if (verifyCode === CORRECT_CODE) {
-                    window.open(chsiLink, "_blank");
-                    setShowVerifyModal(false);
-                  } else {
-                    setVerifyError("查询码错误，请重试");
+                disabled={isVerifying}
+                onClick={async () => {
+                  setIsVerifying(true);
+                  try {
+                    const res = await fetch("/api/verify-code", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ code: verifyCode }),
+                    });
+                    const data = await res.json();
+                    if (data.success) {
+                      window.open(chsiLink, "_blank");
+                      setShowVerifyModal(false);
+                    } else {
+                      setVerifyError("查询码错误，请重试");
+                    }
+                  } catch {
+                    setVerifyError("验证失败，请重试");
+                  } finally {
+                    setIsVerifying(false);
                   }
                 }}
               >
-                确认
+                {isVerifying ? "验证中..." : "确认"}
               </button>
             </div>
           </div>
