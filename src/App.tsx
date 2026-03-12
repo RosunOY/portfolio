@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./styles/main.css";
 import { Nav, Footer, ParticleTrail } from "./components";
 import { Home, Projects, Skills, Experience } from "./pages";
@@ -249,6 +249,8 @@ function App() {
   const [activeTab, setActiveTab] = useState<string>("home");
   const [filter, setFilter] = useState<string>("all");
   const [scrolled, setScrolled] = useState(false);
+  const [isBgmPlaying, setIsBgmPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -312,7 +314,22 @@ function App() {
       />
       <main className="main">{renderPage()}</main>
       <Footer />
-      <audio src="/portfolio/bgm.mp4" autoPlay loop muted playsInline />
+      <audio ref={audioRef} src="/portfolio/bgm.mp4" loop playsInline />
+      <button
+        className={`bgm-toggle ${isBgmPlaying ? "playing" : ""}`}
+        onClick={() => {
+          if (audioRef.current) {
+            if (isBgmPlaying) {
+              audioRef.current.pause();
+            } else {
+              audioRef.current.play();
+            }
+            setIsBgmPlaying(!isBgmPlaying);
+          }
+        }}
+      >
+        {isBgmPlaying ? "🔊" : "🔇"}
+      </button>
     </div>
   );
 }
