@@ -215,7 +215,7 @@ function App() {
   const renderPage = () => {
     switch (activeTab) {
       case "home":
-        return <Home />;
+        return <Home onNavigate={(tab) => setActiveTab(tab)} />;
       case "projects":
         return (
           <Projects

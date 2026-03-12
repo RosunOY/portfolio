@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-export default function Home() {
+interface HomeProps {
+  onNavigate?: (tab: string) => void;
+}
+
+export default function Home({ onNavigate }: HomeProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
@@ -101,6 +105,14 @@ export default function Home() {
           <span className="tag">全栈工程师</span>
           <span className="tag">探索 AI 与游戏的无限可能</span>
         </div>
+        {onNavigate && (
+          <button
+            className="more-about-btn"
+            onClick={() => onNavigate("experience")}
+          >
+            More About Me →
+          </button>
+        )}
       </div>
       <div className="scroll-indicator">
         <div className="mouse"></div>

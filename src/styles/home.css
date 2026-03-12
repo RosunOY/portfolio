@@ -458,6 +458,31 @@
   animation: starTwinkle 4s ease-in-out infinite;
 }
 
+/* More About Me Button */
+.more-about-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #ffd700 0%, #ffec8b 50%, #ffd700 100%);
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  cursor: pointer;
+  box-shadow:
+    0 0 20px rgba(255, 215, 0, 0.5),
+    0 0 40px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: starTwinkle 2s ease-in-out infinite;
+}
+
+.more-about-btn:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 30px rgba(255, 215, 0, 0.7),
+    0 0 50px rgba(255, 215, 0, 0.5);
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
