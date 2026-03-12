@@ -21,6 +21,15 @@ export default function Experience({
   onCardClick,
 }: ExperienceProps) {
   const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
+  const [currentPage, setCurrentPage] = useState<Record<number, number>>({});
+
+  const PHOTOS_PER_PAGE = 12;
+
+  const getCurrentPage = (index: number) => currentPage[index] || 1;
+
+  const setCurrentPageForCard = (index: number, page: number) => {
+    setCurrentPage((prev) => ({ ...prev, [index]: page }));
+  };
 
   const toggleExpand = (index: number, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -57,7 +66,18 @@ export default function Experience({
           if (exp.isPhotoCard && exp.photos && exp.photos.length > 0) {
             const photos = exp.photos;
             const isExpanded = expandedCards.has(index);
-            const displayPhotos = isExpanded ? photos : photos.slice(0, 4);
+            const totalPages = Math.ceil(photos.length / PHOTOS_PER_PAGE);
+            const page = getCurrentPage(index);
+
+            // 展开前显示4张，展开后分页显示
+            let displayPhotos;
+            if (!isExpanded) {
+              displayPhotos = photos.slice(0, 4);
+            } else {
+              const startIdx = (page - 1) * PHOTOS_PER_PAGE;
+              const endIdx = startIdx + PHOTOS_PER_PAGE;
+              displayPhotos = photos.slice(startIdx, endIdx);
+            }
 
             return (
               <div
@@ -73,12 +93,33 @@ export default function Experience({
                       <div key={photoIndex} className="photo-item">
                         <img
                           src={photo}
-                          alt={`照片 ${photoIndex + 1}`}
+                          alt={`照片 ${isExpanded ? (page - 1) * PHOTOS_PER_PAGE + photoIndex + 1 : photoIndex + 1}`}
                           loading="lazy"
                         />
                       </div>
                     ))}
                   </div>
+                  {isExpanded && totalPages > 1 && (
+                    <div className="pagination">
+                      <button
+                        className="page-btn"
+                        onClick={() => setCurrentPageForCard(index, page - 1)}
+                        disabled={page === 1}
+                      >
+                        ← 上一页
+                      </button>
+                      <span className="page-info">
+                        {page} / {totalPages}
+                      </span>
+                      <button
+                        className="page-btn"
+                        onClick={() => setCurrentPageForCard(index, page + 1)}
+                        disabled={page === totalPages}
+                      >
+                        下一页 →
+                      </button>
+                    </div>
+                  )}
                   <button
                     className="expand-btn"
                     onClick={(e) => toggleExpand(index, e)}
