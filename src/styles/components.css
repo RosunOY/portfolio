@@ -136,7 +136,6 @@
   height: 50px;
   border-radius: 50%;
   border: none;
-  position: relative;
   background: linear-gradient(
     135deg,
     rgba(30, 30, 50, 0.9) 0%,
@@ -176,48 +175,6 @@
 
 .bgm-toggle .bgm-icon-fallback {
   font-size: 1.5rem;
-}
-
-/* Volume Slider */
-.volume-slider {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-90deg);
-  width: 80px;
-  height: 6px;
-  -webkit-appearance: none;
-  appearance: none;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 3px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.bgm-toggle:hover .volume-slider {
-  opacity: 1;
-  visibility: visible;
-}
-
-.volume-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  background: #ffd700;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.volume-slider::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
-  background: #ffd700;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
 }
 
 @keyframes bgmPulse {
