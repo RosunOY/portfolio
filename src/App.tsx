@@ -328,7 +328,7 @@ function App() {
           }
         }}
       >
-        {isBgmPlaying ? "🔊" : "🔇"}
+        <img src="/portfolio/声音图标.svg" alt="声音" />
       </button>
     </div>
   );

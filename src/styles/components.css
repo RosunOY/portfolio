@@ -145,12 +145,17 @@
     0 4px 15px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(255, 215, 0, 0.2);
   cursor: pointer;
-  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   z-index: 1000;
+}
+
+.bgm-toggle img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .bgm-toggle:hover {
