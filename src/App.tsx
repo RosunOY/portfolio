@@ -317,7 +317,7 @@ function App() {
       <audio
         ref={audioRef}
         src="/portfolio/bgm.mp3"
-        autoPlay
+        preload="none"
         loop
         playsInline
       />
