@@ -343,6 +343,20 @@ function App() {
           }}
         />
         <span className="bgm-icon-fallback hidden">🔊</span>
+        <input
+          type="range"
+          className="volume-slider"
+          min="0"
+          max="1"
+          step="0.1"
+          defaultValue="0.5"
+          onClick={(e) => e.stopPropagation()}
+          onChange={(e) => {
+            if (audioRef.current) {
+              audioRef.current.volume = parseFloat(e.target.value);
+            }
+          }}
+        />
       </button>
     </div>
   );
