@@ -182,7 +182,7 @@ export default function Experience({
                       setShowVerifyModal(true);
                     }}
                   >
-                    学信网验证 →
+                    学信网验证 (2026.06.09过期) →
                   </a>
                 )}
               </div>
