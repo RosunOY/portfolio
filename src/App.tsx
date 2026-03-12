@@ -334,7 +334,7 @@ function App() {
           }
         }}
       >
-        <img src="/portfolio/声音图标.png" alt="声音" />
+        <img src="/声音图标.png" alt="声音" />
       </button>
     </div>
   );
