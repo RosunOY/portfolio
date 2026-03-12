@@ -2,9 +2,10 @@
 @media (max-width: 768px) {
   /* Home */
   .hero {
-    overflow-y: auto;
+    overflow-y: auto !important;
     min-height: 100vh;
     padding-top: 5rem;
+    padding-bottom: 2rem;
   }
 
   .hero h1 {
